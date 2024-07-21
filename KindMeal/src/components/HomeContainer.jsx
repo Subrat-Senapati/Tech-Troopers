@@ -176,6 +176,7 @@ function HomeContainer() {
                       fontSize: "1.3rem",
                       fontWeight: "500",
                       textDecoration: "none",
+                      color: "#2184ff",
                     }}
                   >
                     {item}
@@ -195,9 +196,9 @@ function HomeContainer() {
               ))}
             </div>
             <div>
-              <div class="row text-center">
+              <div class="row">
                 {list.list.map((item) => (
-                  <div class="col" style={{ margin: "auto" }}>
+                  <div class="col my-1">
                     <img
                       src={item.image}
                       class="rounded"
@@ -209,12 +210,11 @@ function HomeContainer() {
                       }}
                     />
                     <div
-                      class="rounded d-block text-center"
+                      class="rounded d-block text-center "
                       style={{
                         fontSize: ".9rem",
                         height: "auto",
                         width: "12rem",
-                        margin: "auto",
                         color: "#777777",
                         fontWeight: "500",
                       }}
@@ -226,7 +226,6 @@ function HomeContainer() {
                       style={{
                         fontSize: ".72rem",
                         width: "12rem",
-                        margin: "auto",
                         color: "#333333",
                       }}
                     >
