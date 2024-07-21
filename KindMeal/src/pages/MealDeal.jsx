@@ -1,9 +1,40 @@
 import React from "react";
+import TopMeal from "../components/TopMeal";
+import MealHead from "../components/MealHead";
+import FoodComponent from "../components/FoodComponent";
 
-function MealDeal (){
-    return(
+
+function MealDeal() {
+    return (
         <div className="MealDeal">
-            <h1>Meal Deal</h1>
+            <TopMeal />
+            <MealHead />
+            <div style={{
+                display: "flex",
+
+
+            }}>
+                <FoodComponent />
+                <FoodComponent />
+            </div>
+            <div style={{
+                display: "flex",
+            }}>
+                <FoodComponent />
+                <FoodComponent />
+            </div>
+            <div style={{
+                display: "flex",
+            }}>
+                <FoodComponent />
+                <FoodComponent />
+            </div>
+            <div style={{
+                display: "flex",
+            }}>
+                <FoodComponent />
+                <FoodComponent />
+            </div>
         </div>
     );
 }
