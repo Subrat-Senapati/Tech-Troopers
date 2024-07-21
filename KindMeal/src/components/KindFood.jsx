@@ -96,8 +96,8 @@ function KindFood() {
         <>
             <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", }} class="container">
                 {Sdata.map((data) =>
-                    <Card style={{ marginLeft: "3rem", width: "35rem", marginBottom: "2rem", marginTop: "1rem", boxShadow: "0 0 0.5rem gray" }}>
-                        <CardBody>
+                    <Card style={{ marginLeft: "3rem", width: "35rem",height:"65",marginBottom: "2rem", marginTop: "1rem", boxShadow: "0 0 0.5rem gray" }}>
+                        <CardBody style={{height:"50rem",paddingBottom:"0.1rem"}}>
                             <Image
                                 src={data.imgsrc}
                                 borderRadius='lg'
@@ -122,8 +122,8 @@ function KindFood() {
                             </Stack>
                         </CardBody>
                         <Divider />
-                        <CardFooter>
-                            <div>
+                        <CardFooter style={{height:"4rem",paddingTop:"0.1rem"}}>
+                            <div style={{paddingLeft:"2rem",paddingRight:"2rem"}}>
                                 <button style={{
                                     height: "1.5rem",
                                     width: "1.5rem",
@@ -143,11 +143,11 @@ function KindFood() {
                                     <img src="data:image/png;base64,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" />
                                 </button>
                             </div>
-                            <div><p>KindMeal Discount</p>
-                                <p>20% Off</p>
+                            <div style={{paddingLeft:"2.5rem",paddingRight:"1rem"}}><p style={{fontSize:"1rem"}}><b>KindMeal Discount</b></p>
+                                <p style={{fontSize:"1rem",color:"red"}}><b>20% Off</b></p>
                             </div>
-                            <div><p>Expiring Soon</p>
-                                <p>1 day</p>
+                            <div style={{paddingLeft:"2.5rem",paddingRight:"1rem"}}><p style={{fontSize:"1rem"}}><b>Expiring Soon</b></p>
+                                <p style={{fontSize:"1rem",color:"red"}}><b>1 day</b></p>
                             </div>
                         </CardFooter>
                     </Card>

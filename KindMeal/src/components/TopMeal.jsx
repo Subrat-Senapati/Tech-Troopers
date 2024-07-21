@@ -28,24 +28,60 @@ function TopMeal() {
 
                 }}>
 
-                    <input style={{width:"17rem",height:"2.5rem",
-                        borderRadius:"0.4rem",border:"0.1rem solid white",
-                        marginRight:"2rem"
+                    <input style={{
+                        width: "17rem", height: "2.5rem",
+                        borderRadius: "0.4rem", border: "0.1rem solid white",
+                        marginRight: "2rem"
                     }} type="text" placeholder="Search Shop Or Deal" />
-                    <input style={{width:"14rem",height:"2.5rem",
-                        borderRadius:"0.4rem",border:"0.1rem solid white",
-                        marginRight:"2rem"
-                    }} type="text" placeholder="All Category" />
-                    <input style={{width:"14rem",height:"2.5rem",
-                        borderRadius:"0.4rem",border:"0.1rem solid white",
-                        marginRight:"2rem"
-                    }} type="text" placeholder="All Location" />
-                    <button style={{ color: "white", backgroundColor: "red", width:"12rem",height:"2.5rem",
-                        borderRadius:"0.4rem",border:"0.1rem solid white",
-                        marginRight:"2rem"}}><b>Search Deals</b></button>
-                    <button style={{ color: "white", backgroundColor: "green", width:"12rem",height:"2.5rem",
-                        borderRadius:"0.4rem",border:"0.1rem solid white",
-                        marginRight:"2rem"}}><b>Browse Resturanats</b></button>
+                    <select style={{
+                        width: "12rem", display: "inline", border: "0.1rem solid white",
+                        borderRadius: "0.4rem", height: "2.5rem",
+                        marginRight: "2rem"
+                    }} class="form-select" aria-label="Default select example">
+                        <option selected>All Category</option>
+                        <option value="1">Pasta</option>
+                        <option value="2">Burger</option>
+                        <option value="3">Breakfast</option>
+                        <option value="1">Salad</option>
+                        <option value="2">Bakery</option>
+                        <option value="3">Tea and Desert</option>
+                        <option value="1">Chinese</option>
+                        <option value="2">Indian</option>
+                        <option value="3">Soup</option>
+                        <option value="1">Cute</option>
+
+                    </select>
+                    <select style={{
+                        width: "12rem", display: "inline", border: "0.1rem solid white",
+                        borderRadius: "0.4rem", height: "2.5rem",
+                        marginRight: "2rem"
+                    }} class="form-select" aria-label="Default select example">
+                        <option selected>All Location</option>
+                        <option value="1">Kuala Lumpur</option>
+                        <option value="2">Ampang</option>
+                        <option value="3">Petaling Jaya</option>
+                        <option selected>Bangsar</option>
+                        <option value="1">Bangsar South</option>
+                        <option value="2">Banting</option>
+                        <option value="3">Bukit Bintang</option>
+                        <option value="1">Bukit Jail</option>
+                        <option value="2">Cheras</option>
+                        <option value="3">Ipoh</option>
+                        <option value="1">Kapar</option>
+                        <option value="2">Kepong</option>
+                        <option value="3">Klang</option>
+                        <option value="1">Subang</option>
+                    </select>
+                    <button style={{
+                        color: "white", backgroundColor: "red", width: "12rem", height: "2.5rem",
+                        borderRadius: "0.4rem", border: "0.1rem solid white",
+                        marginRight: "2rem"
+                    }}><b>Search Deals</b></button>
+                    <button style={{
+                        color: "white", backgroundColor: "green", width: "12rem", height: "2.5rem",
+                        borderRadius: "0.4rem", border: "0.1rem solid white",
+                        marginRight: "2rem"
+                    }}><b>Browse Resturanats</b></button>
 
                 </div>
             </div>
