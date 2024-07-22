@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from '@chakra-ui/react';
-// import SignupPopup from "./SignupPopup";
+import { Button, Flex } from '@chakra-ui/react';
+import SignUp from "./SignUp";
 
 function Header(){
     // const [isOpen, setIsOpen] = useState(false);
@@ -10,11 +10,12 @@ function Header(){
 
     return (
         <>
+        <Flex>
         <div class="container my-2">
             <img style ={{height:"4.35rem"}} src="https://www.kindmeal.my/images/logo-kindmeal.png" alt="" />
-            {/* <Button onClick={openPopup} colorScheme="teal">Sign Up</Button>
-            <SignupPopup isOpen={isOpen} onClose={closePopup} /> */}
         </div>
+        <SignUp/>
+        </Flex>
         </>
     );
 
