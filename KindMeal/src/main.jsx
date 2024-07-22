@@ -6,6 +6,18 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter } from "react-router-dom";
+<<<<<<< HEAD
+import { ChakraProvider } from "@chakra-ui/react";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+    <ChakraProvider>
+      <App />
+    </ChakraProvider>
+    </BrowserRouter>
+  </React.StrictMode>
+=======
 import { ChakraProvider } from '@chakra-ui/react'
 
 
@@ -18,4 +30,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   </ChakraProvider>
 
 
+>>>>>>> b3ea178730a78581d65f15a7c0aa2a0c47d1c17e
 );
