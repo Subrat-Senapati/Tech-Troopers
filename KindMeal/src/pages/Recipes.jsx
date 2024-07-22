@@ -1,10 +1,9 @@
 import React from "react";
+import Home from "../components/Home";
 
 function Recipes (){
     return(
-        <div className="recipes">
-            <h1>Recipes</h1>
-        </div>
+        <Home />
     );
 }
 
