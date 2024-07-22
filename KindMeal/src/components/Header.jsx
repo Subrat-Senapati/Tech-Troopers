@@ -1,24 +1,27 @@
 import React from "react";
-import { Button, Flex } from '@chakra-ui/react';
+import { Button, Flex } from "@chakra-ui/react";
 import SignUp from "./SignUp";
 
-function Header(){
-    // const [isOpen, setIsOpen] = useState(false);
+function Header() {
+  // const [isOpen, setIsOpen] = useState(false);
 
-    // const openPopup = () => setIsOpen(true);
-    // const closePopup = () => setIsOpen(false);
+  // const openPopup = () => setIsOpen(true);
+  // const closePopup = () => setIsOpen(false);
 
-    return (
-        <>
+  return (
+    <>
+      <div class="container my-2">
         <Flex>
-        <div class="container my-2">
-            <img style ={{height:"4.35rem"}} src="https://www.kindmeal.my/images/logo-kindmeal.png" alt="" />
-        </div>
-        <SignUp/>
+          <img
+            style={{ height: "4.35rem" }}
+            src="https://www.kindmeal.my/images/logo-kindmeal.png"
+            alt=""
+          />
+          <SignUp />
         </Flex>
-        </>
-    );
-
+      </div>
+    </>
+  );
 }
 
 export default Header;
