@@ -1,10 +1,9 @@
 import React from "react";
+import KindMealsHome from "../components/KindMomentsHome";
 
 function KindMoment (){
     return(
-        <div className="KindMoment">
-            <h1>Kind Moment</h1>
-        </div>
+        <KindMealsHome/>
     );
 }
 
