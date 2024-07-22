@@ -176,6 +176,7 @@ function HomeContainer() {
                       fontSize: "1.3rem",
                       fontWeight: "500",
                       textDecoration: "none",
+                      color:"#2184ff"
                     }}
                   >
                     {item}

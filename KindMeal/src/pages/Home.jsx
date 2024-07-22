@@ -68,7 +68,7 @@ function Home() {
       >
         {list.map((item) => (
           <div
-            className="m-3  py-4 px-2"
+            className="m-3  py-4 px-2 text-center"
             style={{
               width: "16rem",
               borderRadius: "1rem",
@@ -76,7 +76,7 @@ function Home() {
             }}
           >
             <img
-              class="mb-3"
+              class="mb-3 mx-auto"
               style={{ height: "6rem", cursor: "pointer" }}
               src={item.image}
               alt=""
@@ -119,21 +119,27 @@ function Home() {
           <p class="m-0">Your testy journey begins here</p>
         </button>
       </center>
-      <div class="container text-center pb-5">
-        <h3 style={{ color: "#888888" }}>Featured On</h3>
-        <img
-          src="https://www.kindmeal.my/images/media-feature2.png"
-          class="img-fluid"
-          alt="..."
-        ></img>
-      </div>
-      <div style={{ backgroundColor: "#ececec" }}>
-        <div class="container text-center">
-          <img
-            src="https://www.kindmeal.my/images/banner_whykindmeal.png"
-            class="img-fluid"
-            alt="..."
-          ></img>
+      <div>
+        <div class="container text-center pb-5">
+          <h3 style={{ color: "#888888" }}>Featured On</h3>
+          <center>
+            <img
+              src="https://www.kindmeal.my/images/media-feature2.png"
+              class="img-fluid"
+              alt="..."
+            ></img>
+          </center>
+        </div>
+        <div style={{ backgroundColor: "#ececec" }}>
+          <div class="container text-center">
+            <center>
+              <img
+                src="https://www.kindmeal.my/images/banner_whykindmeal.png"
+                class="img-fluid"
+                alt="..."
+              ></img>
+            </center>
+          </div>
         </div>
       </div>
     </>
