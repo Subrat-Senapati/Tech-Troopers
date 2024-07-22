@@ -5,8 +5,8 @@ function TopMeal() {
     return (
         <div style={{
             paddingBottom: "7rem", backgroundColor: "rgb(235, 244, 246)", height: "17rem",
-            textAlign: "center",display:"flex",justifyContent:"center"
-        }}>
+            textAlign: "center", display: "flex", justifyContent: "center",
+        }} class="container ">
             <div style={{ textAlign: "left" }}>
                 <div >
                     <p style={{ fontSize: "2rem", }}>
@@ -24,17 +24,32 @@ function TopMeal() {
 
                 </p>
                 <div style={{
-                    paddingTop: "2rem"
+                    paddingTop: "0.2rem",
+
                 }}>
-                    <input type="text" placeholder="Search Shop Or Deal" />
-                    <input type="text" placeholder="All Category" />
-                    <input type="text" placeholder="All Location" />
-                    <button style={{ color: "white", backgroundColor: "red", }}>Search Deals</button>
-                    <button style={{ color: "white", backgroundColor: "green" }}>Browse Resturanats</button>
+
+                    <input style={{width:"17rem",height:"2.5rem",
+                        borderRadius:"0.4rem",border:"0.1rem solid white",
+                        marginRight:"2rem"
+                    }} type="text" placeholder="Search Shop Or Deal" />
+                    <input style={{width:"14rem",height:"2.5rem",
+                        borderRadius:"0.4rem",border:"0.1rem solid white",
+                        marginRight:"2rem"
+                    }} type="text" placeholder="All Category" />
+                    <input style={{width:"14rem",height:"2.5rem",
+                        borderRadius:"0.4rem",border:"0.1rem solid white",
+                        marginRight:"2rem"
+                    }} type="text" placeholder="All Location" />
+                    <button style={{ color: "white", backgroundColor: "red", width:"12rem",height:"2.5rem",
+                        borderRadius:"0.4rem",border:"0.1rem solid white",
+                        marginRight:"2rem"}}><b>Search Deals</b></button>
+                    <button style={{ color: "white", backgroundColor: "green", width:"12rem",height:"2.5rem",
+                        borderRadius:"0.4rem",border:"0.1rem solid white",
+                        marginRight:"2rem"}}><b>Browse Resturanats</b></button>
+
                 </div>
             </div>
         </div>
-
 
     )
 }

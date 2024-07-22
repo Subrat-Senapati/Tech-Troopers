@@ -1,5 +1,6 @@
 import React from "react";
 import HomeContainer from "../components/HomeContainer";
+import Sliderr from "../components/Sliderr";
 
 function Home() {
   let list = [
@@ -27,18 +28,23 @@ function Home() {
 
   return (
     <>
+      <Sliderr />
       <HomeContainer />
-      <div class="container mt-5 text-center">
+      <div class="container mt-5 text-center ">
         <center
-          style={{ color: "#666666", fontSize: "2rem", fontWeight: "500" }}
+          style={{
+            color: "#666666",
+            fontSize: "2rem",
+            fontWeight: "500",
+          }}
         >
           Introducing Malaysia's Pioneering Meat-Free Lifestyle Platform
         </center>
         <center style={{ color: "#999999", fontSize: "1.4rem" }}>
           Brought to you by
           <img
-            class="m-3"
-            style={{ height: "3rem" }}
+            class="m-3 "
+            style={{ height: "3rem", cursor: "pointer" }}
             src="https://www.kindmeal.my/images/logo-petfinder-v2.png"
             alt="PetFinder.my"
           />
@@ -71,7 +77,7 @@ function Home() {
           >
             <img
               class="mb-3"
-              style={{ height: "6rem" }}
+              style={{ height: "6rem", cursor: "pointer" }}
               src={item.image}
               alt=""
             />
@@ -105,6 +111,7 @@ function Home() {
             color: "#ffffff",
             border: "none",
             fontWeight: "bold",
+            cursor: "pointer",
           }}
           type="button"
         >
