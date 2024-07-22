@@ -99,7 +99,7 @@ const Sliderr = () => {
             <img
               src={item.src}
               alt={item.altText}
-              style={{ width: "70rem", height: "30rem" }}
+              style={{ width: "70rem", height: "30rem", margin:"0 auto"}}
             />
           </CarouselItem>
         ))}
@@ -108,7 +108,7 @@ const Sliderr = () => {
           {items.map((item, index) => (
             <button
               style={{
-                width: "7rem",
+                width: "8rem",
                 height: "7rem",
                 border: "none",
                 marginTop: "4rem",
@@ -120,7 +120,7 @@ const Sliderr = () => {
                 key={index}
                 src={item.thumbnail}
                 style={{
-                  width: "7rem",
+                  width: "8rem",
                   height: "7rem",
                   filter: `${index === activeIndex ? "" : "grayscale(80%)"}`,
                 }}
