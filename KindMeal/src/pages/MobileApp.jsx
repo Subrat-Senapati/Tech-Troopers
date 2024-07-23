@@ -31,7 +31,7 @@ function MobileApp() {
       </div>
       <div>
         <center>
-          <div className="my-5 pb-5">
+          <div className="my-5 pb-5 d-flex justify-content-center" style={{width:"70rem"}}>
             <img
               className="mx-4"
               style={{ height: "6rem" }}

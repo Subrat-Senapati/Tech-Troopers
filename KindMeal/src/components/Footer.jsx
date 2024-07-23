@@ -70,7 +70,7 @@ function Footer() {
   return (
     <>
       <footer class="p-4" style={{ color: "white" ,backgroundColor:"#2bb673"}}>
-        <div class="container d-flex justify-content-center flex-wrap">
+        <div class="d-flex justify-content-around flex-wrap">
           {list.map((item) => (
             <div class="mx-3" key={item.title} style={{ width: "auto",height:"auto"}}>
               <h5 class="m-0" style={{fontSize:"1rem"}}>{item.title}</h5>
