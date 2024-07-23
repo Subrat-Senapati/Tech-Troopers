@@ -9,6 +9,7 @@ import Directory from "../pages/Directory"
 import Help from "../pages/Help"
 import Recipes from "../pages/Recipes"
 import MobileApp from "../pages/MobileApp"
+import SignUp from "./SignUp";
 
 
 const AllRoutes = () => {
@@ -24,6 +25,7 @@ const AllRoutes = () => {
         <Route path="/articles" element={<Article />} />
         <Route path="/app" element={<MobileApp />} />
         <Route path="/help" element={<Help />} />
+        <Route path="/SignUp" element={<SignUp />} />
       </Routes>
     </>
   );

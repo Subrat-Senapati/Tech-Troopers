@@ -1,24 +1,92 @@
-import React from "react";
-import { Button, Flex } from "@chakra-ui/react";
-import SignUp from "./SignUp";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import SignupPopup from "./SignupPopup";
 
 function Header() {
-  // const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
-  // const openPopup = () => setIsOpen(true);
-  // const closePopup = () => setIsOpen(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const openPopup = () => setIsOpen(true);
+  const closePopup = () => setIsOpen(false);
+
+  let link = [
+    "https://www.kindmeal.my/images/follow_blog_grey.png",
+    "https://www.kindmeal.my/images/follow_facebook_grey.png",
+    "https://www.kindmeal.my/images/follow_instagram_grey.png",
+  ];
 
   return (
     <>
-      <div class="container my-2">
-        <Flex>
+      <div className="d-flex flex-row justify-content-center align-items-center">
+        <div class="my-2">
           <img
             style={{ height: "4.35rem" }}
             src="https://www.kindmeal.my/images/logo-kindmeal.png"
             alt=""
           />
-          <SignUp />
-        </Flex>
+        </div>
+        <div style={{ width: "20rem" }} class="d-flex flex-row-reverse">
+          <div>
+            {link.map((item) => (
+              <img
+                class="m-2"
+                style={{ height: "2.5rem", display: "inline-block" }}
+                src={item}
+                alt=""
+              />
+            ))}
+          </div>
+        </div>
+        <div
+          className="d-flex align-items-center flex-row-reverse"
+          style={{ height: "4.5rem", width: "30rem" }}
+        >
+          <div>
+            <button
+              class="px-3 mx-2"
+              style={{ height: "1.7rem", border: "none", background: "none" }}
+            >
+              Login
+            </button>
+            <button
+              class="px-3 mx-2"
+              style={{
+                height: "1.7rem",
+                borderRadius: ".5rem",
+                border: "none",
+                backgroundColor: "#35619f",
+                color: "#ffffff",
+              }}
+            >
+              Facebook
+            </button>
+            <button
+              class="px-3 py-0 mx-2"
+              style={{
+                height: "1.7rem",
+                borderRadius: ".5rem",
+                border: "none",
+                backgroundColor: "#666666",
+                color: "#ffffff",
+              }}
+            >
+              Email
+            </button>
+            <button
+              class="px-3 py-0 mx-2"
+              style={{
+                height: "1.7rem",
+                border: "none",
+                background: "none",
+                borderLeft: ".01rem solid grey",
+              }}
+              onClick={openPopup}
+            >
+              Sign Up
+            </button>
+            <SignupPopup isOpen={isOpen} onClose={closePopup} />
+          </div>
+        </div>
       </div>
     </>
   );
