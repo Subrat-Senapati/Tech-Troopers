@@ -30,7 +30,7 @@ function Home() {
     <>
       <Sliderr />
       <HomeContainer />
-      <div class="container mt-5 text-center ">
+      <div class="mt-5 text-center ">
         <center
           style={{
             color: "#666666",
@@ -40,15 +40,20 @@ function Home() {
         >
           Introducing Malaysia's Pioneering Meat-Free Lifestyle Platform
         </center>
-        <center style={{ color: "#999999", fontSize: "1.4rem" }}>
-          Brought to you by
-          <img
-            class="m-3 "
-            style={{ height: "3rem", cursor: "pointer" }}
-            src="https://www.kindmeal.my/images/logo-petfinder-v2.png"
-            alt="PetFinder.my"
-          />
-        </center>
+        <div className="d-flex justify-content-center">
+          <center style={{ color: "#999999", fontSize: "1.4rem" }} className="my-4">
+            Brought to you by
+          </center>
+          <center>
+            <img
+              class="m-3 "
+              style={{ height: "3rem", cursor: "pointer" }}
+              src="https://www.kindmeal.my/images/logo-petfinder-v2.png"
+              alt="PetFinder.my"
+            />
+          </center>
+        </div>
+
         <center
           class="mt-4"
           style={{ color: "#888888", fontSize: "1.5rem", fontWeight: "500" }}
@@ -59,7 +64,7 @@ function Home() {
       </div>
 
       <div
-        class="container text-center "
+        class="text-center "
         style={{
           display: "flex",
           justifyContent: "center",
@@ -91,7 +96,7 @@ function Home() {
         ))}
       </div>
 
-      <div class="container text-center">
+      <div class="text-center">
         <center style={{ color: "#888888", fontSize: "1.3rem" }}>
           Any restaurant or cafe can join KindMeal, vegetarian or not, as long
           as the deals and menu featured are meat-free.
@@ -120,7 +125,7 @@ function Home() {
         </button>
       </center>
       <div>
-        <div class="container text-center pb-5">
+        <div class="text-center pb-5">
           <h3 style={{ color: "#888888" }}>Featured On</h3>
           <center>
             <img
@@ -131,7 +136,7 @@ function Home() {
           </center>
         </div>
         <div style={{ backgroundColor: "#ececec" }}>
-          <div class="container text-center">
+          <div class="text-center">
             <center>
               <img
                 src="https://www.kindmeal.my/images/banner_whykindmeal.png"

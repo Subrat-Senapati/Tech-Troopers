@@ -139,7 +139,6 @@ function HomeContainer() {
     <div style={{ backgroundColor: "rgb(252, 252, 252)" }}>
       {listItem.map((list) => (
         <div
-          class="container"
           style={{
             display: "flex",
             justifyContent: "center",

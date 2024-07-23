@@ -29,7 +29,7 @@ function Help() {
   ];
   return (
     <div className="Help " style={{minWidth:"80rem"}}>
-      <div className="container my-2 d-flex flex-row justify-content-center">
+      <div className="my-2 d-flex flex-row justify-content-center">
         <div>
           {list.map((item) => (
             <div

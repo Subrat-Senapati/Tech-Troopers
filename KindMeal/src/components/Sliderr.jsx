@@ -81,7 +81,7 @@ const Sliderr = () => {
 
   return (
     <div
-      class="container text-center mb-1"
+      class="text-center mb-1 mx-5"
       style={{ boxShadow: "0 0 .3rem grey" }}
     >
       <Carousel
@@ -108,7 +108,7 @@ const Sliderr = () => {
           {items.map((item, index) => (
             <button
               style={{
-                width: "8rem",
+                width: "9rem",
                 height: "7rem",
                 border: "none",
                 marginTop: "4rem",
@@ -120,7 +120,7 @@ const Sliderr = () => {
                 key={index}
                 src={item.thumbnail}
                 style={{
-                  width: "8rem",
+                  width: "9rem",
                   height: "7rem",
                   filter: `${index === activeIndex ? "" : "grayscale(80%)"}`,
                 }}
