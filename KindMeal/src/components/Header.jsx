@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SignupPopup from "./SignupPopup";
+import LoginPopup from "./LoginPopup";
 
 function Header() {
   const navigate = useNavigate();
@@ -60,18 +61,8 @@ function Header() {
             >
               Facebook
             </button>
-            <button
-              class="px-3 py-0 mx-2"
-              style={{
-                height: "1.7rem",
-                borderRadius: ".5rem",
-                border: "none",
-                backgroundColor: "#666666",
-                color: "#ffffff",
-              }}
-            >
-              Email
-            </button>
+          
+            <LoginPopup isOpen={isOpen} onClose={closePopup}/>
             <button
               class="px-3 py-0 mx-2"
               style={{
