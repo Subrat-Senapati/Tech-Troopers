@@ -1,6 +1,6 @@
 
-import { Box, Image, Text, Badge, Button } from '@chakra-ui/react';
-import { px } from 'framer-motion';
+import { Box, Image, Text, Button } from '@chakra-ui/react';
+
 
 const RecipeCard = ({ recipe }) => {
   return (
