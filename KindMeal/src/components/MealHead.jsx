@@ -1,17 +1,26 @@
 import React from "react";
-import { Card, Image, } from "@chakra-ui/react";
+import { Card, Image } from "@chakra-ui/react";
 
 function MealHead() {
-    return (
-
-            <div class="container text-center"
-            style={{boxShadow:"0 0 0.5rem gray",width:"73rem" ,marginTop:"3rem", marginBottom:"3rem",marginRight:"12rem"}}>
-                <img
-                    src='https://www.kindmeal.my/images/banner_recipe.jpg'
-                    class="img-fluid"
-                />
-            </div>
-    )
+  return (
+    <div
+      class="d-flex justify-content-center"
+    >
+      <div
+        style={{
+          width: "73rem",
+          boxShadow: "0 0 0.3rem gray",
+          margin: "3rem ",
+        }}
+      >
+        <img
+          style={{ width: "73rem" }}
+          src="https://www.kindmeal.my/images/banner_recipe.jpg"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+  );
 }
 
-export default MealHead
+export default MealHead;

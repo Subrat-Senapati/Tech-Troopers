@@ -10,6 +10,17 @@ function MealDeal() {
         <TopMeal />
         <MealHead />
         <KindFood/>
+        <div class="pt-4" style={{ backgroundColor: "#ececec" }}>
+          <div class="text-center">
+            <center>
+              <img
+                src="https://www.kindmeal.my/images/how_kindmeal_works.png"
+                class="img-fluid"
+                alt="..."
+              ></img>
+            </center>
+          </div>
+        </div>
       </>
     );
 }
