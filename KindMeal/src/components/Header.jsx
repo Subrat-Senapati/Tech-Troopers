@@ -43,12 +43,8 @@ function Header() {
           style={{ height: "4.5rem", width: "30rem" }}
         >
           <div>
-            <button
-              class="px-3 mx-2"
-              style={{ height: "1.7rem", border: "none", background: "none" }}
-            >
-              Login
-            </button>
+            <LoginPopup isOpen={isOpen} onClose={closePopup} />
+
             <button
               class="px-3 mx-2"
               style={{
@@ -61,8 +57,19 @@ function Header() {
             >
               Facebook
             </button>
-          
-            <LoginPopup isOpen={isOpen} onClose={closePopup}/>
+            <button
+              class="px-3 py-0 mx-2"
+              style={{
+                height: "1.7rem",
+                borderRadius: ".5rem",
+                border: "none",
+                backgroundColor: "#666666",
+                color: "#ffffff",
+              }}
+            >
+              Email
+            </button>
+
             <button
               class="px-3 py-0 mx-2"
               style={{
