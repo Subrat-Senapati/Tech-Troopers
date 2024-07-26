@@ -1,9 +1,12 @@
 import React from "react";
+import ArtHead from "../components/ArtHead";
+import ArtBody from "../components/ArtBody";
 
 function Article (){
     return(
         <div className="Article">
-            <h1>Article</h1>
+           <ArtHead/>
+           <ArtBody/>
         </div>
     );
 }
