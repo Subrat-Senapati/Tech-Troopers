@@ -11,6 +11,11 @@ import Recipes from "../pages/Recipes"
 import MobileApp from "../pages/MobileApp"
 import SignUp from "./SignUp";
 
+import VegDir from "./VegDir";
+import Resturant from "./Resturant";
+import FoodMenu from "./FoodMenu";
+import FoodMap from "./FoodMap";
+
 
 const AllRoutes = () => {
 
@@ -21,7 +26,12 @@ const AllRoutes = () => {
         <Route path="/mealdeal" element={<MealDeal />} />
         <Route path="/kindmoments" element={<KindMoments />} />
         <Route path="/recipes" element={<Recipes />} />
-        <Route path="/directory" element={<Directory />} />
+        <Route path="/directory" element={<VegDir />} />
+
+        <Route path="/resturant" element={<Resturant />} />
+        <Route path="/foodMenu" element={<FoodMenu />} />
+        <Route path="/foodMap" element={<FoodMap />} />
+
         <Route path="/articles" element={<Article />} />
         <Route path="/app" element={<MobileApp />} />
         <Route path="/help" element={<Help />} />
