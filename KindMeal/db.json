@@ -1,76 +1,257 @@
 {
-    "data":[
+    "mealdata":[
         {
             "imgsrc": "https://www.kindmeal.my/photos/deal/6/634-5844-l.jpg",
             "title": "Veggielicious Thai Cuisine",
             "about": "Petaling Jaya,Selangor",
-            "text": "Experience the vibrant flavors of Thailand at Veggielicious Thai! Dive into a diverse selection of authentic vegan dishes in our c.."
+            "text": "Experience the vibrant flavors of Thailand at Veggielicious Thai! Dive into a diverse selection of authentic vegan dishes in our c..",
+            "time":"2 days",
+            "discount":"20% Off"
         },
         {
             "imgsrc": "https://www.kindmeal.my/photos/deal/4/457-2109-l.jpg",
             "title": "The Black Cat Cafe",
             "about": "Kuala Lumpur,Wilayah Persekutuan",
-            "text": "Western and Asian cuisine, all prepared in our humble kitchen with utmost passion and love. On Weekdays, select ANY items from .."
+            "text": "Western and Asian cuisine, all prepared in our humble kitchen with utmost passion and love. On Weekdays, select ANY items from ..",
+            "time":"1 days",
+            "discount":"50% Off"
         },
         {
             "imgsrc": "https://www.kindmeal.my/photos/deal/3/383-1189-l.jpg",
             "title": "Dinning Bowl",
             "about": "Kuala Lumpur,Wilayah Persekutuan",
-            "text": "Dine in this authentic cozy Chinese environment with any items from the menu, made with fresh and quality ingredients, in an envir..."
+            "text": "Dine in this authentic cozy Chinese environment with any items from the menu, made with fresh and quality ingredients, in an envir...",
+            "time":"6 days",
+            "discount":"30% Off"
         },
         {
             "imgsrc": "https://www.kindmeal.my/photos/deal/6/642-3775-l.jpg",
             "title": "Lohas Vegetarian Bistro",
             "about": "Petaling Jaya,Selangor",
-            "text": "Experience healthysustainable living with our delicious and affordable meat-free meals. Select any from our menu: BENTO SET Se.."
+            "text": "Experience healthysustainable living with our delicious and affordable meat-free meals. Select any from our menu: BENTO SET Se..",
+            "time":"3 days",
+            "discount":"25% Off"
         },
         {
             "imgsrc": "https://www.kindmeal.my/photos/deal/5/518-3788-l.jpg",
             "title": "Yishensu@The Curve",
             "about": "Petaling Jaya,Selangor",
-            "text": "Yishensu offers a wide range of delicious oriental dishes, from traditional favorites to creative fusion delights. Enjoy discount.."
+            "text": "Yishensu offers a wide range of delicious oriental dishes, from traditional favorites to creative fusion delights. Enjoy discount..",
+            "time":"4 days",
+            "discount":"10% Off"
+            
         },
         {
             "imgsrc": "https://www.kindmeal.my/photos/deal/5/529-2478-l.jpg",
             "title": "Croutons Cafe",
             "about": "Seri Kembangan, Selangor",
-            "text": "Croutons brings you a sumptuous variety of international cuisines. Indulge in any of the meat-free items from our menu below: • .."
+            "text": "Croutons brings you a sumptuous variety of international cuisines. Indulge in any of the meat-free items from our menu below: • ..",
+            "time":"1 days",
+            "discount":"60% Off"
         },
         {
             "imgsrc": "https://www.kindmeal.my/photos/deal/6/665-4120-l.jpg",
             "title": "The Link Cafe",
             "about": "Kuala Lumpur, Wilayah Persekutuan",
-            "text": "Let us strengthen the connection between your body and soul through our deliciously-crafted meals, while nourishing the connection.."
+            "text": "Let us strengthen the connection between your body and soul through our deliciously-crafted meals, while nourishing the connection..",
+            "time":"4 days",
+            "discount":"10% Off"
+            
         },
         {
             "imgsrc": "https://www.kindmeal.my/photos/deal/4/467-2796-l.jpg",
             "title": "PCLO Cafe",
             "about": "Kuala Lumpur, Wilayah Persekutuan",
-            "text": "Think of Churros, think of PCLO Cafe! Each batch of eggless Churros is made with passion and from scratch in our kitchen. Which .."
+            "text": "Think of Churros, think of PCLO Cafe! Each batch of eggless Churros is made with passion and from scratch in our kitchen. Which ..",
+            "time":"2 days",
+            "discount":"50% Off"
         },
         {
             "imgsrc": "https://www.kindmeal.my/photos/deal/7/703-4854-l.jpg",
             "title": "VietBeans Cafe",
             "about": "Tanjong Sepat, Selangor",
-            "text": "Feast on authentic, delicious homecooked Vietnamese cuisine within a cozy environment. Don't miss out on our aromatic coffees, bre.."
+            "text": "Feast on authentic, delicious homecooked Vietnamese cuisine within a cozy environment. Don't miss out on our aromatic coffees, bre..",
+            "time":"3 days",
+            "discount":"30% Off"
         },
         {
             "imgsrc": "https://www.kindmeal.my/photos/deal/7/753-5830-l.jpg",
             "title": "Wonderfuk Veggie",
             "about": " Klang, Selangor",
-            "text": "Savor the flavors of our wonderfully delectable Oriental cuisine in a warm and inviting atmosphere, perfect for gatherings with lo.."
+            "text": "Savor the flavors of our wonderfully delectable Oriental cuisine in a warm and inviting atmosphere, perfect for gatherings with lo..",
+            "time":"1 days",
+            "discount":"10% Off"
         },
         {
             "imgsrc": "https://www.kindmeal.my/photos/deal/5/591-3151-l.jpg",
             "title": "Vegipai Cafe",
             "about": "Taman Desa, Off Jln. Kelang La.., Kuala Lumpur",
-            "text": "Indulge in a healthy and tasty variety of Oriental and Western delicacies, prepared with quality ingredients! Enjoy any items fro."
+            "text": "Indulge in a healthy and tasty variety of Oriental and Western delicacies, prepared with quality ingredients! Enjoy any items fro.",
+            "time":"5 days",
+            "discount":"10% Off"
         },
         {
             "imgsrc": "https://www.kindmeal.my/photos/deal/7/716-5042-l.jpg",
             "title": "Lolla Paluza",
             "about": " Petaling Jaya, Selangor",
-            "text": "Chill out at our cozy hangout and indulge in our refreshing desserts and sweet treats! Enjoy any items from our menu: WAFFLE - O.."
+            "text": "Chill out at our cozy hangout and indulge in our refreshing desserts and sweet treats! Enjoy any items from our menu: WAFFLE - O..",
+            "time":"2 days",
+            "discount":"45% Off"
+        },
+        {
+            "imgsrc": "https://www.kindmeal.my/photos/deal/5/574-3020-l.jpg",
+            "title": "Medal Mad Cafe",
+            "about": "  Kepong, Kuala Lumpur",
+            "text": "Enjoy a selection of Western cuisine, signature mocktails and desserts, especially their egg bubble waffle! Enjoy meat-free items..",
+            "time":"8 days",
+            "discount":"30% Off"
+        },
+        {
+            "imgsrc": "https://www.kindmeal.my/photos/deal/7/716-5042-l.jpg",
+            "title": "Lolla Paluza",
+            "about": " Petaling Jaya, Selangor",
+            "text": "Chill out at our cozy hangout and indulge in our refreshing desserts and sweet treats! Enjoy any items from our menu: WAFFLE - O..",
+            "time":"9 days",
+            "discount":"20% Off"
+        },
+        {
+            "imgsrc": "https://www.kindmeal.my/photos/deal/7/715-5155-l.jpg",
+            "title": "Eat21",
+            "about": " Petaling Jaya, Selangor",
+            "text": "Currently for Takeaway & Delivery only. Feast on our signature plant-based meals, crafted with heart to provide you with a wholes..",
+            "time":"1 days",
+            "discount":"40% Off"
+        },
+        {
+            "imgsrc": "https://www.kindmeal.my/photos/deal/6/621-3576-l.jpg",
+            "title": "Honest Bakery Cafe",
+            "about": "  Subang Jaya , Selangor",
+            "text": "Experience a delightful selection of creative meat-free meals from our menu: • Ala Carte Meat-Free Menu • Meat-Free Set Lunch ..",
+            "time":"4 days",
+            "discount":"30% Off"
+        },
+        {
+            "imgsrc": "https://www.kindmeal.my/photos/deal/7/708-4923-l.jpg",
+            "title": "Camp Forest",
+            "about": "  Kepong, Selangor",
+            "text": "Camp Forest presents a pure, natural dining ambience, serving you a healthy, delectable selection of fusion Chinese and Western de..",
+            "time":"6 days",
+            "discount":"60% Off"
+        },
+        {
+            "imgsrc": "https://www.kindmeal.my/photos/deal/4/457-2109-l.jpg",
+            "title": "The Black Cat Cafe",
+            "about": " Kuala Lumpur, Wilayah Persekutuan",
+            "text": "Western and Asian cuisine, all prepared in our humble kitchen with utmost passion and love. On Weekdays, select ANY items from ..",
+            "time":"2 days",
+            "discount":"15% Off"
         }
+    ],
+    "articlelist":[
+        {
+            "imgscr":"https://www.kindmeal.my/photos/article/21/21937-l.jpg",
+            "title": "Turkeys Loves Riding Farm Tractor",
+            "add": "byKindMeal.my",
+            "text": "😂 ",
+            "date": "25 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21936-l.jpg",
+            "title": "Bombay Sandwich With Chai Masala",
+            "add": "byKindMeal.my",
+            "text": " 🌶️",
+            "date": "24 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21935-l.jpg",
+            "title": "Fabulous Feathered Flamingo Flock Turns Five",
+            "text": " This fabulous flamingo flock turns 5. ❤",
+            "add": "byKindMeal.my",
+            "date": "23 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21933-l.jpg",
+            "title": "Lamb Is Obsessed With His Mom's Coworker",
+            "text": "Crew encounter some curious creatures.",
+            "add": "byKindMeal.my",
+            "date": "22 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21931-l.jpg",
+            "title": "Crew Encounter Some Curious Creatures",
+            "text": "Crew encounter some curious creatures",
+            "add": "byKindMeal.my",
+            "date": "21 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21914-l.jpg",
+            "title": "Goat Loves Getting A Lift From His Frind",
+            "add": "byKindMeal.my",
+            "text": "Naughty goat hitches a ride on his horse bestie to reach his fav snack ",
+            "date": "20 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21907-l.jpg",
+            "title": "Clam Drunk",
+            "add": "byKindMeal.my",
+            "text": " ! 🏀",
+            "date": "19 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21898-l.jpg",
+            "title": "Cute Zoo Animals Play In Summer Sun",
+            "text": " Enjoying the summer! ☀️",
+            "add": "byKindMeal.my",
+            "date": "18 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21885-l.jpg",
+            "title": "Giant Blt Sandwich",
+            "text": "💥.",
+            "add": "byKindMeal.my",
+            "date": "17 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21871-l.jpg",
+            "title": "Gentle Red Panda Has A Birthday Party",
+            "text": "Gentle red panda enjoys a birthday party 🎂",
+            "add": "byKindMeal.my",
+            "date": "16 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21948-l.jpg",
+            "title": "Rooster Masters Biking, Spends Hours On Wheels",
+            "text": "🐓",
+            "add": "byKindMeal.my",
+            "date": "15 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21947-l.jpg",
+            "title": "Dolphins React To Bizarre Bubbles | Ocean Giants",
+            "text": "Dolphins love playing with bubbles! 🫧",
+            "add": "byKindMeal.my",
+            "date": "14 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21939-l.jpg",
+            "title": "Adorable Beaver Chomps An Apple",
+            "text": "Beavers like Maple don’t eat wood. Instead, they prefer leaves, bark and crunchy snacks!",
+            "add": "byKindMeal.my",
+            "date": "13 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21898-l.jpg",
+            "title": "Cute Zoo Animals Play In The Summer Sun",
+            "text": "Enjoying the summer! ☀️",
+            "add": "byKindMeal.my",
+            "date": "12 july"
+          },
+          {
+            "imgscr": "https://www.kindmeal.my/photos/article/21/21891-l.jpg",
+            "title": "Donkeys Bite And Cuddle The Man For Attention",
+            "text": "💕",
+            "add": "byKindMeal.my",
+            "date": "11 july"
+          }
     ]
 }
