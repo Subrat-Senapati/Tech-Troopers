@@ -1,25 +1,41 @@
+import React from 'react';
+import { Box, Image, Text, IconButton, Avatar, HStack, Stack, Button, Spacer, VStack} from '@chakra-ui/react';
+import {ViewIcon} from '@chakra-ui/icons';
+import { FaHeart, FaComment} from 'react-icons/fa';
+import { px } from 'framer-motion';
 
-import { Box, Image, Text, Button } from '@chakra-ui/react';
-
-
-const RecipeCard = ({ recipe }) => {
+const RecipeCard = ({recipe}) => {
   return (
-    <Box borderWidth="1px" borderRadius="10px" overflow="hidden" width="250px">
-      <Image src={recipe.image} alt={recipe.name} boxSize="270px"  objectFit="cover" />
+    <Box height="m" maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+      <HStack p="4">
+        <Avatar src="path/to/avatar.jpg" name="MayNg" />
+        <Text fontWeight="bold" marginTop={3}>MayNg</Text>
+        <Spacer/>
+        <Button colorScheme='red'>View</Button>
+      </HStack>
+      <VStack>
+      <Image boxSize='300px' objectFit='cover' src={recipe.image} alt={recipe.name} />
       
-      <Box p="6">
-        <Box display="flex" alignItems="baseline">
-        </Box>
-        <Box mt="1px" fontWeight="semibold" as="h4" lineHeight="tight">
+      </VStack>
+   
+      <Text fontSize="lg" fontWeight="bold" backgroundColor="black"  textAlign='center' color={"white"}>
           {recipe.name}
-        </Box>
-        <Box>
-         Time:{recipe.time}
-         
-        </Box>
-        <Button mt="2px"  backgroundColor="red" color="white" size="sm">
-          View
-        </Button>
+      </Text>
+      
+
+      <Box p="6">
+
+        <Stack direction="row" justify="space-between" align="center" mt={"-30px"}>
+          <HStack spacing="2">
+            <Text>Time:{recipe.time}</Text>
+          </HStack>
+          <HStack spacing="2">
+             <FaHeart />
+            <Text marginTop={"3"}>3</Text>
+            <FaComment />
+            <Text marginTop={"3"}>2</Text>
+          </HStack>
+        </Stack>
       </Box>
     </Box>
   );

@@ -1,4 +1,3 @@
-
 import { LinkOverlay, SimpleGrid } from '@chakra-ui/react';
 import RecipeCard from './RecipeCard';
 
