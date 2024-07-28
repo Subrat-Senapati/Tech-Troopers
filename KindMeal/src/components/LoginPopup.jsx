@@ -33,7 +33,7 @@ const LoginPopup = () => {
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent px={4}>
           <ModalHeader textAlign="center">
             <Image
               src="https://www.kindmeal.my/images/logo-kindmeal.png"

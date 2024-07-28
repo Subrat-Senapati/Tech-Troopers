@@ -1,79 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import DirNav from "./DirNav";
 
 function Resturant() {
-  let restaurantList = [
-    {
-      image: "https://www.kindmeal.my/photos/shop/1/126-cm.jpg",
-      title: "Purple Cane Tea Cuisine",
-      name: "Kuala Lumpur & 1 Branch",
-      details:
-        "Purple Cane Tea Cuisine is uniquely prepared, infusing tea in every dish to bring out the natural aroma and flavor of fo..",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/shop/5/520-cm.jpg",
-      title: "Tea+ Artisan Tea Bar",
-      name: "Kuala Lumpur, Wilayah Persekutuan",
-      details:
-        "Tea+ indulges you with the first artisan tea bar experience in Malaysia. We are here to revive the forgotten culture, t..",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/shop/6/604-cm.jpg",
-      title: "Hainan Village",
-      name: "Puchong & 5 Branches",
-      details: `Recognized as the "First Hainanese Vegeterian Kopitiam in Malaysia” by the Malaysia Book of Records, Hainan Village stri..
-`,
-    },
-    {
-      image: "https://www.kindmeal.my/photos/shop/4/498-cm.jpg",
-      title: "Honest Bakery Cafe",
-      name: "Subang Jaya , Selangor",
-      details:
-        "Honest Bakery Cafe is a local cafe in Subang Jaya that serves and promotes meat-free meals to encourage vegetarianism. ..",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/shop/6/694-cm.jpg",
-      title: "S.pace Cafe",
-      name: "Kuala Lumpur, Wilayah Persekutuan",
-      details:
-        "Welcome to S.pace Cafe! Enjoy a cozy, inviting atmosphere as you savor our delicious plant-based meals and coffee. We ..",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/shop/5/514-cm.jpg",
-      title: "Veggielicious Thai Cuisine",
-      name: "Petaling Jaya, Selangor",
-      details:
-        "Veggielicious, an authentic Thai-vegan fusion cuisine that encompasses exceptional taste, offering the perfect dining ex..",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/shop/5/528-cm.jpg",
-      title: "Vegelab",
-      name: "Cheras, Kuala Lumpur",
-      details:
-        "Welcome to Vegelab Maxim Cheras Love Food, Love Life and Love Our Planet We aim to help raise consciousness around foo..",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/shop/3/392-cm.jpg",
-      title: "Ring Zhi Vegetarian Restaurant",
-      name: "Kepong, Kuala Lumpur",
-      details:
-        "This Chinese vegetarian restaurant is camouflaged amidst big shady trees, strategically located in the buzzing district ..",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/shop/5/505-cm.jpg",
-      title: "Sushi Kitchen Kota Damansara",
-      name: "Kuala Lumpur & 1 Branch",
-      details:
-        "A PLACE FOR US TO REWARDS OURSELVES. Sushi Kitchen™ established at year 2009. We are the 1st plant-based sushi in Mala..",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/shop/4/405-cm.jpg",
-      title: "Yishensu @ The Curve",
-      name: "Petaling Jaya, Selangor",
-      details:
-        "With beginnings in Ipoh and Kampar as manufacturers and suppliers of processed vegetarian food, Yishensu was known as Yi..",
-    },
-  ];
+  
+  const [restaurantList, setRestaurantList] = useState([]);
+  const [page, setPage] = useState(1);
+  const [last, setLast] = useState(0);
+  const [first, setFirst] = useState(0);
+
+  async function getData() {
+    let res = await fetch(
+      `http://localhost:7000/restaurantList?_page=${page}&_per_page=10`
+    );
+    let fetchedData = await res.json();
+    setRestaurantList(fetchedData.data);
+    setLast(fetchedData.last);
+    setFirst(fetchedData.first);
+  }
+  useEffect(() => {
+    getData();
+  }, [page, last]);
+  
   return (
     <>
       <div
@@ -151,26 +98,68 @@ function Resturant() {
 
       <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <button class="page-link">prev</button>
+          <li class="page-item ">
+            <button
+              disabled={page <= first}
+              onClick={() => {
+                setPage(page - 1);
+              }}
+              class="page-link"
+            >
+              prev
+            </button>
           </li>
           <li class="page-item">
-            <a class="page-link" href="#">
-              1
+            <a
+              class="page-link"
+              href="#"
+              style={
+                page === 1
+                  ? { backgroundColor: "#40bfed", color: "white" }
+                  : { backgroundColor: "white", color: "black" }
+              }
+            >
+              {page - 1 === 0 ? page : page === last ? page - 2 : page - 1}
             </a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="#">
-              2
+            <a
+              class="page-link"
+              href="#"
+              style={
+                page === 1
+                  ? { backgroundColor: "white", color: "black" }
+                  : page === last
+                  ? { backgroundColor: "white", color: "black" }
+                  : { backgroundColor: "#40bfed", color: "white" }
+              }
+            >
+              {page === 1 ? page + 1 : page === last ? page - 1 : page}
             </a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="#">
-              3
+            <a
+              class="page-link"
+              href="#"
+              style={
+                page === last
+                  ? { backgroundColor: "#40bfed", color: "white" }
+                  : { backgroundColor: "white", color: "black" }
+              }
+            >
+              {page - 1 === 0 ? page + 2 : page === last ? page : page + 1}
             </a>
           </li>
           <li class="page-item">
-            <button class="page-link">next</button>
+            <button
+              disabled={page >= last}
+              onClick={() => {
+                setPage(page + 1);
+              }}
+              class="page-link"
+            >
+              next
+            </button>
           </li>
         </ul>
       </nav>

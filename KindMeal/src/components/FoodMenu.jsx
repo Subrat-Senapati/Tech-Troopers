@@ -1,99 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import DirNav from "./DirNav";
 
 function FoodMenu() {
-  let foodList = [
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10398-m.jpg",
-      name: "Burger Nugget Vege",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10403-m.jpg",
-      name: "Mexican Chocolate Bun",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10373-m.jpg",
-      name: "Cartoon Spiderman",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10404-m.jpg",
-      name: "Pizza Round Vege",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10414-m.jpg",
-      name: "Butter Cheese Vege Bread",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10428-m.jpg",
-      name: "Orange Swiss Roll",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10427-m.jpg",
-      name: "Mocha Swiss Roll",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10380-m.jpg",
-      name: "Unicon Cake",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10440-m.jpg",
-      name: "Mocha Coffee Slice",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10396-m.jpg",
-      name: "Vanilla Orange Cake",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10393-m.jpg",
-      name: "Pandan Layer",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10434-m.jpg",
-      name: "Chocolate Mousse Slice",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10409-m.jpg",
-      name: "Almond Chocolate",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10418-m.jpg",
-      name: "Pandan Raisin Bread",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-    {
-      image: "https://www.kindmeal.my/photos/item/0/668-10377-m.jpg",
-      name: "Chocolate Vanilla",
-      details: "Natural Cake House Kapar",
-      place: "Kapar, Selangor",
-    },
-  ];
 
   let locationList = [
     "Malaysia",
@@ -127,6 +35,25 @@ function FoodMenu() {
     "Soup",
     "Other",
   ];
+
+  const [foodList, setFoodList] = useState([]);
+  const [page, setPage] = useState(1);
+  const [last, setLast] = useState(0);
+  const [first, setFirst] = useState(0);
+
+  async function getData() {
+    let res = await fetch(
+      `http://localhost:7000/foodList?_page=${page}&_per_page=18`
+    );
+    let fetchedData = await res.json();
+    setFoodList(fetchedData.data);
+    setLast(fetchedData.last);
+    setFirst(fetchedData.first);
+  }
+  useEffect(() => {
+    getData();
+  }, [page, last]);
+  
 
   return (
     <>
@@ -200,26 +127,68 @@ function FoodMenu() {
 
       <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <button class="page-link">prev</button>
+          <li class="page-item ">
+            <button
+              disabled={page <= first}
+              onClick={() => {
+                setPage(page - 1);
+              }}
+              class="page-link"
+            >
+              prev
+            </button>
           </li>
           <li class="page-item">
-            <a class="page-link" href="#">
-              1
+            <a
+              class="page-link"
+              href="#"
+              style={
+                page === 1
+                  ? { backgroundColor: "#40bfed", color: "white" }
+                  : { backgroundColor: "white", color: "black" }
+              }
+            >
+              {page - 1 === 0 ? page : page === last ? page - 2 : page - 1}
             </a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="#">
-              2
+            <a
+              class="page-link"
+              href="#"
+              style={
+                page === 1
+                  ? { backgroundColor: "white", color: "black" }
+                  : page === last
+                  ? { backgroundColor: "white", color: "black" }
+                  : { backgroundColor: "#40bfed", color: "white" }
+              }
+            >
+              {page === 1 ? page + 1 : page === last ? page - 1 : page}
             </a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="#">
-              3
+            <a
+              class="page-link"
+              href="#"
+              style={
+                page === last
+                  ? { backgroundColor: "#40bfed", color: "white" }
+                  : { backgroundColor: "white", color: "black" }
+              }
+            >
+              {page - 1 === 0 ? page + 2 : page === last ? page : page + 1}
             </a>
           </li>
           <li class="page-item">
-            <button class="page-link">next</button>
+            <button
+              disabled={page >= last}
+              onClick={() => {
+                setPage(page + 1);
+              }}
+              class="page-link"
+            >
+              next
+            </button>
           </li>
         </ul>
       </nav>

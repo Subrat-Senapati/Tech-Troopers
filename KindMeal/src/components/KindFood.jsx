@@ -10,117 +10,25 @@ import {
 } from "@chakra-ui/react";
 
 function KindFood() {
-  // const [data, setData] = useState([]);
-  // const [page, setPage] = useState(1);
-  // const [last, setLast] = useState(0);
+  const [Sdata, setSdata] = useState([]);
+  const [page, setPage] = useState(1);
+  const [last, setLast] = useState(0);
+  const [first, setFirst] = useState(0);
 
-  // async function getData(){
-  //     let res = await fetch('');
-  //     let fetchedData = await res.json();
-  //     setData(fetchedData.data);
-  //     setLast(fetchedData.last);
-  // }
-  // useEffect(() =>{
-  //     getData();
-  // },[page,last]);
+  async function getData() {
+    let res = await fetch(
+      `http://localhost:7000/mealdata?_page=${page}&_per_page=10`
+    );
+    let fetchedData = await res.json();
+    setSdata(fetchedData.data);
+    setLast(fetchedData.last);
+    setFirst(fetchedData.first);
+  }
+  useEffect(() => {
+    getData();
+  }, [page, last]);
 
-  let Sdata = [
-    {
-      imgsrc: "https://www.kindmeal.my/photos/deal/6/634-5844-l.jpg",
-      title: "Veggielicious Thai Cuisine",
-      about: "Petaling Jaya,Selangor",
-      text: "Experience the vibrant flavors of Thailand at Veggielicious Thai! Dive into a diverse selection of authentic vegan dishes in our c..",
-      time:"2 days",
-      discount:"20% Off",
-    },
-    {
-      imgsrc: "https://www.kindmeal.my/photos/deal/4/457-2109-l.jpg",
-      title: "The Black Cat Cafe",
-      about: "Kuala Lumpur,Wilayah Persekutuan",
-      text: "Western and Asian cuisine, all prepared in our humble kitchen with utmost passion and love. On Weekdays, select ANY items from ..",
-      time:"1 days",
-      discount:"50% Off",
-    },
-    {
-      imgsrc: "https://www.kindmeal.my/photos/deal/3/383-1189-l.jpg",
-      title: "Dinning Bowl",
-      about: "Kuala Lumpur,Wilayah Persekutuan",
-      text: "Dine in this authentic cozy Chinese environment with any items from the menu, made with fresh and quality ingredients, in an envir...",
-      time:"6 days",
-      discount:"30% Off",
-    },
-    {
-      imgsrc: "https://www.kindmeal.my/photos/deal/6/642-3775-l.jpg",
-      title: "Lohas Vegetarian Bistro",
-      about: "Petaling Jaya,Selangor",
-      text: "Experience healthysustainable living with our delicious and affordable meat-free meals. Select any from our menu: BENTO SET Se..",
-      time:"3 days",
-      discount:"25% Off",
-    },
-    {
-      imgsrc: "https://www.kindmeal.my/photos/deal/5/518-3788-l.jpg",
-      title: "Yishensu@The Curve",
-      about: "Petaling Jaya,Selangor",
-      text: "Yishensu offers a wide range of delicious oriental dishes, from traditional favorites to creative fusion delights. Enjoy discount..",
-      time:"4 days",
-      discount:"10% Off",
-    },
-    {
-      imgsrc: "https://www.kindmeal.my/photos/deal/5/529-2478-l.jpg",
-      title: "Croutons Cafe",
-      about: "Seri Kembangan, Selangor",
-      text: "Croutons brings you a sumptuous variety of international cuisines. Indulge in any of the meat-free items from our menu below: • ..",
-      time:"1 days",
-      discount:"60% Off",
-    },
-    {
-      imgsrc: "https://www.kindmeal.my/photos/deal/6/665-4120-l.jpg",
-      title: "The Link Cafe",
-      about: "Kuala Lumpur, Wilayah Persekutuan",
-      text: "Let us strengthen the connection between your body and soul through our deliciously-crafted meals, while nourishing the connection..",
-      time:"4 days",
-      discount:"20% Off",
-    },
-    {
-      imgsrc: "https://www.kindmeal.my/photos/deal/4/467-2796-l.jpg",
-      title: "PCLO Cafe",
-      about: "Kuala Lumpur, Wilayah Persekutuan",
-      text: "Think of Churros, think of PCLO Cafe! Each batch of eggless Churros is made with passion and from scratch in our kitchen. Which ..",
-      time:"2 days",
-      discount:"50% Off",
-    },
-    {
-      imgsrc: "https://www.kindmeal.my/photos/deal/7/703-4854-l.jpg",
-      title: "VietBeans Cafe",
-      about: "Tanjong Sepat, Selangor",
-      text: "Feast on authentic, delicious homecooked Vietnamese cuisine within a cozy environment. Don't miss out on our aromatic coffees, bre..",
-      time:"3 days",
-      discount:"30% Off",
-    },
-    {
-      imgsrc: "https://www.kindmeal.my/photos/deal/7/753-5830-l.jpg",
-      title: "Wonderfuk Veggie",
-      about: " Klang, Selangor",
-      text: "Savor the flavors of our wonderfully delectable Oriental cuisine in a warm and inviting atmosphere, perfect for gatherings with lo..",
-      time:"1 day",
-      discount:"10% Off",
-    },
-    {
-      imgsrc: "https://www.kindmeal.my/photos/deal/5/591-3151-l.jpg",
-      title: "Vegipai Cafe",
-      about: "Taman Desa, Off Jln. Kelang La.., Kuala Lumpur",
-      text: "Indulge in a healthy and tasty variety of Oriental and Western delicacies, prepared with quality ingredients! Enjoy any items fro.",
-      time:"5 days",
-      discount:"20% Off",
-    },
-    {
-      imgsrc: "https://www.kindmeal.my/photos/deal/7/716-5042-l.jpg",
-      title: "Lolla Paluza",
-      about: " Petaling Jaya, Selangor",
-      text: "Chill out at our cozy hangout and indulge in our refreshing desserts and sweet treats! Enjoy any items from our menu: WAFFLE - O..",
-      time:"2 days",discount:"45% Off",
-    },
-  ];
+  
   return (
     <>
       <div className="d-flex justify-content-center">
@@ -237,26 +145,68 @@ function KindFood() {
       </div>
       <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <button class="page-link">prev</button>
+          <li class="page-item ">
+            <button
+              disabled={page <= first}
+              onClick={() => {
+                setPage(page - 1);
+              }}
+              class="page-link"
+            >
+              prev
+            </button>
           </li>
           <li class="page-item">
-            <a class="page-link" href="#">
-              1
+            <a
+              class="page-link"
+              href="#"
+              style={
+                page === 1
+                  ? { backgroundColor: "#40bfed", color: "white" }
+                  : { backgroundColor: "white", color: "black" }
+              }
+            >
+              {page - 1 === 0 ? page : page === last ? page - 2 : page - 1}
             </a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="#">
-              2
+            <a
+              class="page-link"
+              href="#"
+              style={
+                page === 1
+                  ? { backgroundColor: "white", color: "black" }
+                  : page === last
+                  ? { backgroundColor: "white", color: "black" }
+                  : { backgroundColor: "#40bfed", color: "white" }
+              }
+            >
+              {page === 1 ? page + 1 : page === last ? page - 1 : page}
             </a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="#">
-              3
+            <a
+              class="page-link"
+              href="#"
+              style={
+                page === last
+                  ? { backgroundColor: "#40bfed", color: "white" }
+                  : { backgroundColor: "white", color: "black" }
+              }
+            >
+              {page - 1 === 0 ? page + 2 : page === last ? page : page + 1}
             </a>
           </li>
           <li class="page-item">
-            <button class="page-link">next</button>
+            <button
+              disabled={page >= last}
+              onClick={() => {
+                setPage(page + 1);
+              }}
+              class="page-link"
+            >
+              next
+            </button>
           </li>
         </ul>
       </nav>

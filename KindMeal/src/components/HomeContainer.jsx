@@ -128,13 +128,14 @@ function HomeContainer() {
           description: "",
         },
         {
-          image: "https://www.kindmeal.my/photos/member/41/41505-m.jpg",
+          image: "https://www.kindmeal.my/photos/member/35/35162-m.jpg",
           title: "SockChinKhor",
           description: "",
         },
       ],
     },
   ];
+
   return (
     <div style={{ backgroundColor: "rgb(252, 252, 252)" }}>
       {listItem.map((list) => (

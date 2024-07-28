@@ -38,7 +38,7 @@ import MomentsList from './MomentsList';
         <Select width='200px' placeholder='All locations'>
 
         </Select>
-        <Button colorScheme='red' width='100px'>Search</Button>
+        <Button colorScheme='red'className='red-btn' width='100px'>Search</Button>
       </ButtonGroup>
   </Flex>
   <Flex justifyContent={"space-between"} width={"30%"} color={'blue'} margin='15px 0px'>

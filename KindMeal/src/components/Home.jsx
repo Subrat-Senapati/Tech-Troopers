@@ -33,10 +33,10 @@ const Home = () => {
             <option value="Side Dishes">Side Dishes</option>
             
           </Select>
-          <Button  backgroundColor="#f53838" color="white"  >Search Recipes</Button>
+          <Button className='red-btn' backgroundColor="#f53838" color="white"  >Search Recipes</Button>
 
           <Spacer/>
-          <Button  backgroundColor="#2bb673" color="white" mr='230px'>Share My Recipe</Button>
+          <Button className='green-btn' backgroundColor="#2bb673" color="white" mr='230px'>Share My Recipe</Button>
           </HStack>
           <br></br>
           
@@ -50,7 +50,7 @@ const Home = () => {
       <div mb="50px">
         <SimpleGrid columns={[2,4,6]} spacing="7px">
 
-      <Button backgroundColor="#2bb673" color="white" marginLeft={"5px"} marginRight={"2px"} width={"170px"}>All Categories</Button>
+      <Button className='green-btn' backgroundColor="#2bb673" color="white" marginLeft={"5px"} marginRight={"2px"} width={"170px"}>All Categories</Button>
           <Button backgroundColor="#ececec" color="grey" marginLeft={"2px"} marginRight={"2px"} border={'1px solid lightgrey'} width={"170px"}>Appetizers</Button>
           <Button backgroundColor="#ececec" color="grey" marginLeft={"2px"} marginRight={"2px"}  border={'1px solid lightgrey'} width={"170px"}>Beverages</Button>
           <Button backgroundColor="#ececec" color="grey" marginLeft={"2px"} marginRight={"2px"}  border={'1px solid lightgrey'} width={"170px"}>Breakfast</Button>

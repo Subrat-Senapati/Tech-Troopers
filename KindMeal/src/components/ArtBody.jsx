@@ -1,78 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function ArtBody() {
-  let Adata = [
-    {
-      imgscr: "https://www.kindmeal.my/photos/article/21/21937-l.jpg",
-      title: "Turkeys Loves Riding Farm Tractor",
-      add: "byKindMeal.my",
-      text: "😂 ",
-      date: "25 july",
-    },
-    {
-      imgscr: "https://www.kindmeal.my/photos/article/21/21936-l.jpg",
-      title: "Bombay Sandwich With Chai Masala",
-      add: "byKindMeal.my",
-      text: " 🌶️",
-      date: "24 july",
-    },
-    {
-      imgscr: "https://www.kindmeal.my/photos/article/21/21935-l.jpg",
-      title: "Fabulous Feathered Flamingo Flock Turns Five",
-      text: " This fabulous flamingo flock turns 5. ❤",
-      add: "byKindMeal.my",
-      date: "23 july",
-    },
-    {
-      imgscr: "https://www.kindmeal.my/photos/article/21/21933-l.jpg",
-      title: "Lamb Is Obsessed With His Mom's Coworker",
-      text: "Crew encounter some curious creatures.",
-      add: "byKindMeal.my",
-      date: "22 july",
-    },
-    {
-      imgscr: "https://www.kindmeal.my/photos/article/21/21931-l.jpg",
-      title: "Crew Encounter Some Curious Creatures",
-      text: "Crew encounter some curious creatures",
-      add: "byKindMeal.my",
-      date: "21 july",
-    },
-    {
-      imgscr: "https://www.kindmeal.my/photos/article/21/21914-l.jpg",
-      title: "Goat Loves Getting A Lift From His Frind",
-      add: "byKindMeal.my",
-      text: "Naughty goat hitches a ride on his horse bestie to reach his fav snack ",
-      date: "20 july",
-    },
-    {
-      imgscr: "https://www.kindmeal.my/photos/article/21/21907-l.jpg",
-      title: "Clam Drunk",
-      add: "byKindMeal.my",
-      text: " ! 🏀",
-      date: "19 july",
-    },
-    {
-      imgscr: "https://www.kindmeal.my/photos/article/21/21898-l.jpg",
-      title: "Cute Zoo Animals Play In Summer Sun",
-      text: " Enjoying the summer! ☀️",
-      add: "byKindMeal.my",
-      date: "18 july",
-    },
-    {
-      imgscr: "https://www.kindmeal.my/photos/article/21/21885-l.jpg",
-      title: "Giant Blt Sandwich",
-      text: "💥.",
-      add: "byKindMeal.my",
-      date: "17 july",
-    },
-    {
-      imgscr: "https://www.kindmeal.my/photos/article/21/21871-l.jpg",
-      title: "Gentle Red Panda Has A Birthday Party",
-      text: "Gentle red panda enjoys a birthday party 🎂",
-      add: "byKindMeal.my",
-      date: "16 july",
-    },
-  ];
+  
+  const [Adata, setAdata] = useState([]);
+  const [page, setPage] = useState(1);
+  const [last, setLast] = useState(0);
+  const [first, setFirst] = useState(0);
+
+  async function getData() {
+    let res = await fetch(
+      `http://localhost:7000/articlelist?_page=${page}&_per_page=10`
+    );
+    let fetchedData = await res.json();
+    setAdata(fetchedData.data);
+    setLast(fetchedData.last);
+    setFirst(fetchedData.first);
+  }
+  useEffect(() => {
+    getData();
+  }, [page, last]);
   return (
     <>
       <div style={{ display: "flex", justifyContent: "center" }}>
@@ -142,6 +88,73 @@ function ArtBody() {
           ))}
         </div>
       </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item ">
+            <button
+              disabled={page <= first}
+              onClick={() => {
+                setPage(page - 1);
+              }}
+              class="page-link"
+            >
+              prev
+            </button>
+          </li>
+          <li class="page-item">
+            <a
+              class="page-link"
+              href="#"
+              style={
+                page === 1
+                  ? { backgroundColor: "#40bfed", color: "white" }
+                  : { backgroundColor: "white", color: "black" }
+              }
+            >
+              {page - 1 === 0 ? page : page === last ? page - 2 : page - 1}
+            </a>
+          </li>
+          <li class="page-item">
+            <a
+              class="page-link"
+              href="#"
+              style={
+                page === 1
+                  ? { backgroundColor: "white", color: "black" }
+                  : page === last
+                  ? { backgroundColor: "white", color: "black" }
+                  : { backgroundColor: "#40bfed", color: "white" }
+              }
+            >
+              {page === 1 ? page + 1 : page === last ? page - 1 : page}
+            </a>
+          </li>
+          <li class="page-item">
+            <a
+              class="page-link"
+              href="#"
+              style={
+                page === last
+                  ? { backgroundColor: "#40bfed", color: "white" }
+                  : { backgroundColor: "white", color: "black" }
+              }
+            >
+              {page - 1 === 0 ? page + 2 : page === last ? page : page + 1}
+            </a>
+          </li>
+          <li class="page-item">
+            <button
+              disabled={page >= last}
+              onClick={() => {
+                setPage(page + 1);
+              }}
+              class="page-link"
+            >
+              next
+            </button>
+          </li>
+        </ul>
+      </nav>
     </>
   );
 }
