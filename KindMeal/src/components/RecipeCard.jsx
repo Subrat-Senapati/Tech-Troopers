@@ -2,14 +2,15 @@ import React from 'react';
 import { Box, Image, Text, IconButton, Avatar, HStack, Stack, Button, Spacer, VStack} from '@chakra-ui/react';
 import {ViewIcon} from '@chakra-ui/icons';
 import { FaHeart, FaComment} from 'react-icons/fa';
+import { BiAlarm } from "react-icons/bi";
 import { px } from 'framer-motion';
 
 const RecipeCard = ({recipe}) => {
   return (
     <Box height="m" maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
       <HStack p="4">
-        <Avatar src="path/to/avatar.jpg" name="MayNg" />
-        <Text fontWeight="bold" marginTop={3}>MayNg</Text>
+        <Avatar src={recipe.avatar} name="MayNg" />
+        <Text fontWeight="bold" marginTop={3}>{recipe.user}</Text>
         <Spacer/>
         <Button colorScheme='red'>View</Button>
       </HStack>
@@ -27,13 +28,13 @@ const RecipeCard = ({recipe}) => {
 
         <Stack direction="row" justify="space-between" align="center" mt={"-30px"}>
           <HStack spacing="2">
-            <Text>Time:{recipe.time}</Text>
+          <BiAlarm /><Text mt={'15px'}>:{recipe.time}</Text>
           </HStack>
           <HStack spacing="2">
              <FaHeart />
-            <Text marginTop={"3"}>3</Text>
+            <Text marginTop={"4"}>{recipe.like}</Text>
             <FaComment />
-            <Text marginTop={"3"}>2</Text>
+            <Text marginTop={"4"}>{recipe.comment}</Text>
           </HStack>
         </Stack>
       </Box>
