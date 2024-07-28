@@ -68,7 +68,7 @@ const Home = () => {
           
           <br></br>
           <Flex justifyContent={"space-between"} width={"30%"} color={'blue'}>
-                    <h6 margintop="4px" color='black'>Pages:  </h6>
+          <Text pt='15px' color='grey'>Page:  </Text>
                     <button class="item"><a class="link" href="#"  >1</a></button>
                     <button class="item"><a class="link" href="#" >2</a></button>
                     <button class="item"><a class="link" href="#">3</a></button>
@@ -86,8 +86,8 @@ const Home = () => {
       
       <Flex justifyContent={"space-between"} width={"30%"} color={'blue'}>
                  
-                    <h6 margintop="4px" >Pages:</h6>
-                    <button class="link" >prev</button>
+      <Text pt='15px' color='grey'>Page:  </Text>
+                    
                     <button class="item"><a class="link" href="#">1</a></button>
                     <button class="item"><a class="link" href="#">2</a></button>
                     <button class="item"><a class="link" href="#">3</a></button>
@@ -97,7 +97,7 @@ const Home = () => {
                     <button class="item"><a class="link" href="#">7</a></button>
                     <button class="item"><a class="link" href="#">8</a></button>
                     <button class="item"><a class="link" href="#">9</a></button>
-                    <button class="link">next</button>
+                    
                     
                 
             
