@@ -1,4 +1,4 @@
-// src/CardComponent.jsx
+
 import { Box, Image, Text, HStack, VStack, Avatar, Button, Spacer, } from "@chakra-ui/react";
 import { FaHeart, FaComment, FaCamera } from 'react-icons/fa';
 
@@ -8,7 +8,7 @@ const MomentCard = ({ moment }) => {
 
       <Box >
         <HStack  p='5px' mt='-10px' mb='-10px'>
-          <Avatar name={moment.user} src="https://www.kindmeal.my/photos/member/23/23028-s.jpg"/>
+          <Avatar name={moment.user} src={moment.avatar}/>
           <VStack align="start" spacing='5px' >
             <Text mt='10px'>{moment.user}</Text>
             <Text mt='-20px' fontSize="sm" color="grey">{moment.date}</Text>
