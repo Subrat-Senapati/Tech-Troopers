@@ -1,4 +1,4 @@
-// src/components/MomentsList.jsx
+
 import { SimpleGrid} from '@chakra-ui/react';
 import MomentCard from './MomentCard';
 
@@ -23,38 +23,38 @@ const moment = [
 
   {
     id: 3,
-    image: 'https://www.kindmeal.my/photos/moment/26/26817-55494-m.jpg',
+    image: 'https://www.kindmeal.my/photos/moment/26/26858-55629-m.jpg',
     user: 'William21',
-    avatar: '',
+    avatar: 'https://www.kindmeal.my/photos/member/19/19456-s.jpg',
     date:"Jul 28th 2024",
-    description: 'A wonderful vegan meal I had today!'
+    description: 'Nice meal @ Soul Kitchen'
   },
 
   {
     id: 4,
-    image: 'https://www.kindmeal.my/photos/moment/26/26825-55530-m.jpg',
-    user: 'Delicious Meal',
-    avatar: '',
+    image: 'https://www.kindmeal.my/photos/moment/26/26857-55628-m.jpg',
+    user: 'PiggyLovesToEat',
+    avatar: 'https://www.kindmeal.my/photos/member/10/10038-s.jpg',
     date:"Jul 28th 2024",
-    description: 'A wonderful vegan meal I had today!'
+    description: 'What you do when you have friends from Singapore visiting PJ SS2? Bring them to try durian and Kayu giant roti tissue of course!'
   },
 
   { 
     id: 5,
-    image: 'https://www.kindmeal.my/photos/moment/26/26811-55469-m.jpg',
-    user: 'Delicious Meal',
-    avatar: '',
+    image: 'https://www.kindmeal.my/photos/moment/26/26856-55624-m.jpg',
+    user: 'PiggyLovesToEat',
+    avatar: 'https://www.kindmeal.my/photos/member/10/10038-s.jpg',
     date:"Jul 28th 2024",
-    description: 'A wonderful vegan meal I had today!'
+    description: 'Volunteering at the Entrepreneur Camp today, had this amazing nasi lemak with kurma and otak-otak. The tastes of bodhicitta from o.. see more'
   },
 
   {  
     id: 6,
-    image: 'https://www.kindmeal.my/photos/moment/26/26823-55523-m.jpg',
-    user: 'Delicious Meal',
-    avatar: '',
+    image: 'https://www.kindmeal.my/photos/moment/26/26827-55536-m.jpg',
+    user: 'YinYinBoey',
+    avatar: 'https://www.kindmeal.my/photos/member/23/23028-s.jpg',
     date:"Jul 27th 2024",
-    description: 'A wonderful vegan meal I had today!'
+    description: 'Happened to be in this area for work so decided to try it ou.. see more'
   },
 ];
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Image, Flex, Button, ButtonGroup, Spacer, Input, Select, Text, Card, VStack, HStack} from '@chakra-ui/react';
+import { Box, Image, Flex, Button, ButtonGroup, Spacer, Input, Select, Text, VStack, HStack} from '@chakra-ui/react';
 import MomentsList from './MomentsList';
 
   const KindMealsHome = () => (
@@ -9,7 +9,7 @@ import MomentsList from './MomentsList';
       <HStack bg='#ececec' pl='100px' ml='-100px' pr='100px' mr='-100px' justifyContent='center'>
   <Box backgroundColor='#ececec' p='20px 0px'>
     <HStack>
-  <Text fontSize='2xl'>KindMoments    </Text>
+  <Text fontSize='2xl' fontStyle='bold'>KindMoments    </Text>
   <Text fontSize='2xl' color='grey'>|    Saving Lives with Yummy Photos</Text>
     </HStack>      
   <Text>Discover new, delicious meat-free cuisines enjoyed by other compassionate food lovers. Share your interesting KindMoments, and build your own fans and followers to encourage kind, healthy meals.</Text>
@@ -43,8 +43,8 @@ import MomentsList from './MomentsList';
   </Flex>
   <Flex justifyContent={"space-between"} width={"30%"} color={'blue'} margin='15px 0px'>
   <Text pt='15px' color='grey'>Page:  </Text>
-    <button class="item"><a class="link" href="#"  >1</a></button>
-    <button class="item"><a class="link" href="#" >2</a></button>
+    <button class="item"><a class="link" href="#">1</a></button>
+    <button class="item"><a class="link" href="#">2</a></button>
     <button class="item"><a class="link" href="#">3</a></button>
     <button class="item"><a class="link" href="#">4</a></button>
     <button class="item"><a class="link" href="#">5</a></button>
