@@ -25,7 +25,7 @@ function FoodMap() {
       <DirNav />
       <div className="d-flex justify-content-center">
         <div className="my-3">
-          <div>
+          <div className="d-flex">
             <p
               className="pe-5"
               style={{
@@ -37,14 +37,22 @@ function FoodMap() {
             >
               Display:
             </p>
-            <div style={{ display: "inline-block", width: "17rem" }}>
+            <div
+              className="d-flex align-items-center"
+              style={{
+                display: "inline-block",
+                width: "17rem",
+                height: "2rem",
+              }}
+            >
               <img
                 style={{ height: "2.1rem", width: "2rem" }}
                 src="https://www.kindmeal.my/images/map/marker-shop.png"
                 alt=""
               />
-              <input type="checkbox" className="mx-2" checked/>
+              <input type="checkbox" className="mx-2" checked />
               <p
+                className="m-0"
                 style={{
                   color: "#000000",
                   fontSize: "1rem",
@@ -54,14 +62,18 @@ function FoodMap() {
                 KindMeal Restaurants
               </p>
             </div>
-            <div style={{ display: "inline-block", width: "22rem" }}>
+            <div
+              className="d-flex align-items-center"
+              style={{ display: "inline-block", width: "22rem" }}
+            >
               <img
                 style={{ height: "2rem", width: "2rem" }}
                 src="https://www.kindmeal.my/images/map/marker-red.png"
                 alt=""
               />
-              <input type="checkbox" className="mx-2" checked/>
+              <input type="checkbox" className="mx-2" checked />
               <p
+                className="m-0"
                 style={{
                   color: "#000000",
                   fontSize: "1rem",
@@ -104,7 +116,7 @@ function FoodMap() {
             }}
           />
           <button
-            class="me-5"
+            class="me-5 red-btn"
             style={{
               backgroundColor: "#f53838",
               color: "white",

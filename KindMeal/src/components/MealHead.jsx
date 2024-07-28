@@ -3,14 +3,13 @@ import { Card, Image } from "@chakra-ui/react";
 
 function MealHead() {
   return (
-    <div
-      class="d-flex justify-content-center"
-    >
+    <div class="d-flex justify-content-center">
       <div
         style={{
           width: "73rem",
           boxShadow: "0 0 0.3rem gray",
           margin: "3rem ",
+          cursor: "pointer",
         }}
       >
         <img

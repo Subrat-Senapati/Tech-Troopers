@@ -170,7 +170,7 @@ function HomeContainer() {
                 <div style={{ display: "inline", float: "right" }}>
                   <a
                     href="#"
-                    class="px-3"
+                    class="px-3 a-decoration"
                     style={{
                       fontSize: "1.3rem",
                       fontWeight: "500",

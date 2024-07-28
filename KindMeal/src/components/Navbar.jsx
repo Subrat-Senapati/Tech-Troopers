@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const AllLink = [
@@ -17,24 +17,30 @@ function Navbar() {
     <>
       <div class="" style={{ backgroundColor: "#2bb673" }}>
         <ul
-          class="nav nav-pills pb-0 justify-content-center"
+          class="nav pb-0 justify-content-center"
           id="pills-tab"
           role="tablist"
         >
           {AllLink.map((item) => (
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link mx-3 py-1"
-                id="pills-home-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-home"
-                type="button"
-                
+            <li class="nav-item nav-icon" role="presentation">
+              <NavLink
+                to={item.path}
+                style={{
+                  fontSize: "1.23rem",
+                  textDecoration: "none",
+                }}
               >
-                <Link to={item.path} style={{ color: "white", fontSize: "1.23rem",textDecoration:"none"}}>
+                <button
+                  class="nav-link mx-3 py-1"
+                  type="button"
+                  style={{
+                    borderRadius:"none",
+                    color: "white",
+                  }}
+                >
                   {item.name}
-                </Link>
-              </button>
+                </button>
+              </NavLink>
             </li>
           ))}
         </ul>

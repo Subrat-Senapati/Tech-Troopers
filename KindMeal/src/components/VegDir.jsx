@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import DirNav from "./DirNav";
 
 function VegDir() {
-
   let shopList = [
     "Selangor",
     "Kuala Lumpur",
@@ -16,7 +15,6 @@ function VegDir() {
     "Terengganu",
   ];
 
-  
   // const [data, setData] = useState([]);
   // const [page, setPage] = useState(1);
   // const [last, setLast] = useState(0);
@@ -196,7 +194,7 @@ function VegDir() {
                 ))}
               </select>
               <button
-                class="mx-5"
+                class="mx-5 red-btn"
                 style={{
                   backgroundColor: "#f53838",
                   color: "white",
@@ -209,7 +207,7 @@ function VegDir() {
                 Search Shops
               </button>
               <button
-                class="mx-5"
+                class="mx-5 green-btn"
                 style={{
                   backgroundColor: "#04be5a",
                   color: "white",
@@ -245,7 +243,7 @@ function VegDir() {
                     ? `${data.description.slice(0, 180)}... `
                     : data.description}
                   {data.description.length > 60 ? (
-                    <a style={{ textDecoration: "none" }} href="#">
+                    <a className="a-decoration" style={{ textDecoration: "none" }} href="#">
                       show more
                     </a>
                   ) : (
@@ -278,6 +276,7 @@ function VegDir() {
                 </div>
                 <div class="d-flex flex-row justify-content-between">
                   <button
+                    className="a-decoration"
                     style={{
                       border: "none",
                       background: "none",
@@ -291,6 +290,7 @@ function VegDir() {
                     |
                   </span>
                   <button
+                    className="a-decoration"
                     style={{
                       border: "none",
                       background: "none",
@@ -304,6 +304,7 @@ function VegDir() {
                     |
                   </span>
                   <button
+                    className="a-decoration"
                     style={{
                       border: "none",
                       background: "none",

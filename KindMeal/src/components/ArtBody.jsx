@@ -120,8 +120,9 @@ function ArtBody() {
                   {value.text}{" "}
                 </p>
                 <button
+                className="red-btn"
                   style={{
-                    backgroundColor: "#F53838",
+                    backgroundColor: "#f53838",
                     width: "12rem",
                     height: "2.5rem",
                     color: "#FFFFFF",

@@ -35,37 +35,43 @@ function Resturant() {
       image: "https://www.kindmeal.my/photos/shop/6/694-cm.jpg",
       title: "S.pace Cafe",
       name: "Kuala Lumpur, Wilayah Persekutuan",
-      details: "Welcome to S.pace Cafe! Enjoy a cozy, inviting atmosphere as you savor our delicious plant-based meals and coffee. We ..",
+      details:
+        "Welcome to S.pace Cafe! Enjoy a cozy, inviting atmosphere as you savor our delicious plant-based meals and coffee. We ..",
     },
     {
       image: "https://www.kindmeal.my/photos/shop/5/514-cm.jpg",
       title: "Veggielicious Thai Cuisine",
       name: "Petaling Jaya, Selangor",
-      details: "Veggielicious, an authentic Thai-vegan fusion cuisine that encompasses exceptional taste, offering the perfect dining ex..",
+      details:
+        "Veggielicious, an authentic Thai-vegan fusion cuisine that encompasses exceptional taste, offering the perfect dining ex..",
     },
     {
       image: "https://www.kindmeal.my/photos/shop/5/528-cm.jpg",
       title: "Vegelab",
       name: "Cheras, Kuala Lumpur",
-      details: "Welcome to Vegelab Maxim Cheras Love Food, Love Life and Love Our Planet We aim to help raise consciousness around foo..",
+      details:
+        "Welcome to Vegelab Maxim Cheras Love Food, Love Life and Love Our Planet We aim to help raise consciousness around foo..",
     },
     {
       image: "https://www.kindmeal.my/photos/shop/3/392-cm.jpg",
       title: "Ring Zhi Vegetarian Restaurant",
       name: "Kepong, Kuala Lumpur",
-      details: "This Chinese vegetarian restaurant is camouflaged amidst big shady trees, strategically located in the buzzing district ..",
+      details:
+        "This Chinese vegetarian restaurant is camouflaged amidst big shady trees, strategically located in the buzzing district ..",
     },
     {
       image: "https://www.kindmeal.my/photos/shop/5/505-cm.jpg",
       title: "Sushi Kitchen Kota Damansara",
       name: "Kuala Lumpur & 1 Branch",
-      details: "A PLACE FOR US TO REWARDS OURSELVES. Sushi Kitchen™ established at year 2009. We are the 1st plant-based sushi in Mala..",
+      details:
+        "A PLACE FOR US TO REWARDS OURSELVES. Sushi Kitchen™ established at year 2009. We are the 1st plant-based sushi in Mala..",
     },
     {
       image: "https://www.kindmeal.my/photos/shop/4/405-cm.jpg",
       title: "Yishensu @ The Curve",
       name: "Petaling Jaya, Selangor",
-      details: "With beginnings in Ipoh and Kampar as manufacturers and suppliers of processed vegetarian food, Yishensu was known as Yi..",
+      details:
+        "With beginnings in Ipoh and Kampar as manufacturers and suppliers of processed vegetarian food, Yishensu was known as Yi..",
     },
   ];
   return (
@@ -123,14 +129,15 @@ function Resturant() {
                     {item.details}
                   </p>
                   <button
+                    className="red-btn"
                     style={{
-                      fontSize:"1.1rem",
+                      fontSize: "1.1rem",
                       border: "none",
-                      backgroundColor: "#f53838",               
+                      backgroundColor: "#f53838",
                       borderRadius: "0.5rem",
                       padding: " .5rem 3rem",
-                      color:"#ffffff",
-                      fontWeight:"bold"
+                      color: "#ffffff",
+                      fontWeight: "bold",
                     }}
                   >
                     View Shop

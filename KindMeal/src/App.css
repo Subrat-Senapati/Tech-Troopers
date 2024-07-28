@@ -5,3 +5,28 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+.dir .active button {
+  background-color: #2bb673 !important;
+  color: #ffffff !important;
+}
+
+.nav-icon .active button {
+  background-color: #229760 !important;
+}
+
+.a-decoration{
+  color: #2184ff;
+}
+.a-decoration:hover{
+  text-decoration: underline !important;
+}
+.home-btn:hover{
+  background-color: #c80808 !important;
+}
+
+.red-btn:hover{
+  background-color:#df1616 !important;
+}
+.green-btn:hover{
+  background-color: #067f44 !important;
+}

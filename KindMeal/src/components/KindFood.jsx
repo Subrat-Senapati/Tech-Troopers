@@ -143,9 +143,10 @@ function KindFood() {
                   <Text>{data.text}</Text>
                   <Text color="white" fontSize="2xl">
                     <button
+                    className="red-btn"
                       style={{
                         border: "1px solid red",
-                        backgroundColor: "red",
+                        backgroundColor: "#f53838",
                         textAlign: "center",
                         display: "flex",
                         justifyContent: "left",

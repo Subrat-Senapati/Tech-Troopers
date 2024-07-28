@@ -99,7 +99,7 @@ function TopMeal() {
               </select>
 
               <button
-                class="me-4"
+                class="me-4 red-btn"
                 style={{
                   backgroundColor: "#f53838",
                   color: "white",
@@ -112,7 +112,7 @@ function TopMeal() {
                 Search Deals
               </button>
               <button
-                class=""
+                class="green-btn"
                 style={{
                   backgroundColor: "#04be5a",
                   color: "white",

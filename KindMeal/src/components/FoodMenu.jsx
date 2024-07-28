@@ -310,7 +310,7 @@ function FoodMenu() {
             </div>
           </div>
           <button
-            class="mt-3"
+            class="mt-3 red-btn"
             style={{
               backgroundColor: "#f53838",
               color: "white",

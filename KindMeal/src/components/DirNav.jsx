@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function DirNav() {
   const AllLink = [
@@ -13,33 +13,31 @@ function DirNav() {
     <>
       <div className="d-flex justify-content-center my-4">
         <div className="d-flex">
-          {AllLink.map((item,idx) => (
-            <div>
-              <input
-                type="radio"
-                class="btn-check"
-                name="btnradio"
-                id={idx}
-                autocomplete="off"
-              />
-              <button
-                class="btn btn-outline-primary"
-                for={idx}
-                className="mx-5 px-3 py-2"
+          {AllLink.map((item, idx) => (
+            <div className="dir">
+              <NavLink
+                to={item.path}
                 style={{
+                  textDecoration: "none",
+                  color: "#666666",
                   borderRadius: ".5rem",
-                  background: "#f8f8f8",
-                  border: ".02rem solid gray",
-                  width: "14rem",
                 }}
+                className="mx-5 py-2"
               >
-                <Link
-                  to={item.path}
-                  style={{ textDecoration: "none", color: "#666666" }}
+                <button
+                  class="btn btn-outline-primary"
+                  for={idx}
+                  className="px-3 py-2"
+                  style={{
+                    borderRadius: ".5rem",
+                    border: ".01rem solid gray",
+                    background: "#f8f8f8",
+                    width: "14rem",
+                  }}
                 >
                   {item.name}
-                </Link>
-              </button>
+                </button>
+              </NavLink>
             </div>
           ))}
         </div>

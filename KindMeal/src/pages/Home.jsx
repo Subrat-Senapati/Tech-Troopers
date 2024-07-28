@@ -1,8 +1,11 @@
 import React from "react";
 import HomeContainer from "../components/HomeContainer";
 import Sliderr from "../components/Sliderr";
+import { useNavigate } from "react-router-dom";
+
 
 function Home() {
+  const navigate = useNavigate();
   let list = [
     {
       image: "https://www.kindmeal.my/images/intro_deal.png",
@@ -108,6 +111,11 @@ function Home() {
       </div>
       <center>
         <button
+        onClick={() => {
+          navigate("");
+        }}
+        
+        className="home-btn"
           style={{
             padding: ".8rem 4rem 1.1rem",
             margin: "5rem 0",
