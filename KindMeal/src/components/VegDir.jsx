@@ -1,6 +1,17 @@
 import React, { useEffect, useState } from "react";
 import DirNav from "./DirNav";
 
+import staticmap1 from '../assets/staticmap 1.png'
+import staticmap2 from '../assets/staticmap 2.png'
+import staticmap3 from '../assets/staticmap 3.png'
+import staticmap4 from '../assets/staticmap 4.png'
+import staticmap5 from '../assets/staticmap 5.png'
+import staticmap6 from '../assets/staticmap 6.png'
+import staticmap7 from '../assets/staticmap 7.png'
+import staticmap8 from '../assets/staticmap 8.png'
+import staticmap9 from '../assets/staticmap 9.png'
+import staticmap10 from '../assets/staticmap 10.png'
+
 function VegDir() {
   let shopList = [
     "Selangor",
@@ -13,6 +24,19 @@ function VegDir() {
     "Pehang",
     "Perak",
     "Terengganu",
+  ];
+
+  let apiImage =[
+    staticmap1,
+    staticmap2,
+    staticmap3,
+    staticmap4,
+    staticmap5,
+    staticmap6,
+    staticmap7,
+    staticmap8,
+    staticmap9,
+    staticmap10
   ];
 
   const [vegData, setVegData] = useState([]);
@@ -121,7 +145,7 @@ function VegDir() {
       <DirNav />
       <div className="d-flex justify-content-center">
         <div className="d-flex flex-row flex-wrap justify-content-center">
-          {vegData.map((data) => (
+          {vegData.map((data,idx) => (
             <div>
               <div
                 className="card m-4"
@@ -169,7 +193,7 @@ function VegDir() {
                   <img
                     style={{ height: "200px", width: "450px" }}
                     class="img-fluid"
-                    src={data.image}
+                    src={apiImage[idx]}
                     alt=""
                   />
                 </div>
