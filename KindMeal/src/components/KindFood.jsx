@@ -33,8 +33,9 @@ function KindFood() {
     <>
       <div className="d-flex justify-content-center">
         <div className="d-flex flex-row flex-wrap justify-content-center">
-          {Sdata.map((data) => (
+          {Sdata.map((data,idx) => (
             <Card
+            key={idx}
               style={{
                 margin: "1.7rem 2rem",
                 width: "35rem",
@@ -144,21 +145,21 @@ function KindFood() {
         </div>
       </div>
       <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item ">
+        <ul className="pagination justify-content-center">
+          <li className="page-item ">
             <button
               disabled={page <= first}
               onClick={() => {
                 setPage(page - 1);
               }}
-              class="page-link"
+              className="page-link"
             >
               prev
             </button>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === 1
@@ -169,9 +170,9 @@ function KindFood() {
               {page - 1 === 0 ? page : page === last ? page - 2 : page - 1}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === 1
@@ -184,9 +185,9 @@ function KindFood() {
               {page === 1 ? page + 1 : page === last ? page - 1 : page}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === last
@@ -197,13 +198,13 @@ function KindFood() {
               {page - 1 === 0 ? page + 2 : page === last ? page : page + 1}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <button
               disabled={page >= last}
               onClick={() => {
                 setPage(page + 1);
               }}
-              class="page-link"
+              className="page-link"
             >
               next
             </button>

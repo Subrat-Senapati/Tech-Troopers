@@ -15,14 +15,14 @@ function Navbar() {
 
   return (
     <>
-      <div class="" style={{ backgroundColor: "#2bb673" }}>
+      <div className="" style={{ backgroundColor: "#2bb673" }}>
         <ul
-          class="nav pb-0 justify-content-center"
+          className="nav pb-0 justify-content-center"
           id="pills-tab"
           role="tablist"
         >
-          {AllLink.map((item) => (
-            <li class="nav-item nav-icon" role="presentation">
+          {AllLink.map((item,idx) => (
+            <li className="nav-item nav-icon" role="presentation" key={idx}>
               <NavLink
                 to={item.path}
                 style={{
@@ -31,7 +31,7 @@ function Navbar() {
                 }}
               >
                 <button
-                  class="nav-link mx-3 py-1"
+                  className="nav-link mx-3 py-1"
                   type="button"
                   style={{
                     borderRadius:"none",

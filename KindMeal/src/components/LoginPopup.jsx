@@ -24,7 +24,7 @@ const LoginPopup = () => {
   return (
     <>
       <Button
-        class="px-3 mx-2"
+        className="px-3 mx-2"
         style={{ height: "1.7rem", border: "none", background: "none" }}
         onClick={onOpen}
       >

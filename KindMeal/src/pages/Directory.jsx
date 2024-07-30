@@ -33,10 +33,10 @@ function Directory() {
             <a href="#">contact us</a> now.
           </p>
           <div className="d-flex flex-row justify-content-between">
-            <div class="m-2">
+            <div className="m-2">
               <input
                 type="text"
-                class="ps-2 me-5"
+                className="ps-2 me-5"
                 placeholder="Search Shop Name"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
@@ -63,13 +63,13 @@ function Directory() {
                 className="ps-2"
                 aria-label="Default select example"
               >
-                <option selected>All Shops in Malaysia</option>
+                <option defaultValue="All Shops in Malaysia" >All Shops in Malaysia</option>
                 {shopList.map((list, idx) => (
-                  <option value={idx}>{list}</option>
+                  <option value={idx} key={idx}>{list}</option>
                 ))}
               </select>
               <button
-                class="mx-5"
+                className="mx-5"
                 style={{
                   backgroundColor: "#f53838",
                   color: "white",
@@ -82,7 +82,7 @@ function Directory() {
                 Search Shops
               </button>
               <button
-                class="mx-5"
+                className="mx-5"
                 style={{
                   backgroundColor: "#04be5a",
                   color: "white",

@@ -138,15 +138,16 @@ function HomeContainer() {
 
   return (
     <div style={{ backgroundColor: "rgb(252, 252, 252)" }}>
-      {listItem.map((list) => (
+      {listItem.map((list,idx) => (
         <div
+        key={idx}
           style={{
             display: "flex",
             justifyContent: "center",
           }}
         >
           <div
-            class="cotainer"
+            className="cotainer"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -157,7 +158,7 @@ function HomeContainer() {
               cursor: "pointer",
             }}
           >
-            <div class="mb-2">
+            <div className="mb-2">
               <h4
                 style={{
                   color: "#666666",
@@ -168,10 +169,10 @@ function HomeContainer() {
               </h4>
 
               {list.link.reverse().map((item, idx) => (
-                <div style={{ display: "inline", float: "right" }}>
+                <div style={{ display: "inline", float: "right" }} key={idx*5}>
                   <a
                     href="#"
-                    class="px-3 a-decoration"
+                    className="px-3 a-decoration"
                     style={{
                       fontSize: "1.3rem",
                       fontWeight: "500",
@@ -182,7 +183,7 @@ function HomeContainer() {
                     {item}
                   </a>
                   <p
-                    class="m-0"
+                    className="m-0"
                     style={{
                       display: "inline-block",
                       fontSize: "1.2rem",
@@ -196,12 +197,12 @@ function HomeContainer() {
               ))}
             </div>
             <div>
-              <div class="row">
-                {list.list.map((item) => (
-                  <div class="col my-1">
+              <div className="row">
+                {list.list.map((item,idx) => (
+                  <div key={idx} className="col my-1">
                     <img
                       src={item.image}
-                      class="rounded"
+                      className="rounded"
                       alt={item.image}
                       style={{
                         height: "13rem",
@@ -210,7 +211,7 @@ function HomeContainer() {
                       }}
                     />
                     <div
-                      class="rounded d-block text-center "
+                      className="rounded d-block text-center "
                       style={{
                         fontSize: ".9rem",
                         height: "auto",
@@ -222,7 +223,7 @@ function HomeContainer() {
                       {item.title}
                     </div>
                     <div
-                      class="rounded d-block text-center"
+                      className="rounded d-block text-center"
                       style={{
                         fontSize: ".72rem",
                         width: "12rem",

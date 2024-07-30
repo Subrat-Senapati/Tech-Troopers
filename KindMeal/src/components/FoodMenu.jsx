@@ -80,8 +80,8 @@ function FoodMenu() {
 
       <div className="d-flex justify-content-center">
         <div className="d-flex flex-row flex-wrap justify-content-center">
-          {foodList.map((item) => (
-            <div>
+          {foodList.map((item,idx) => (
+            <div key={idx}>
               <div
                 className="card m-4"
                 style={{
@@ -126,21 +126,21 @@ function FoodMenu() {
       
 
       <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item ">
+        <ul className="pagination justify-content-center">
+          <li className="page-item ">
             <button
               disabled={page <= first}
               onClick={() => {
                 setPage(page - 1);
               }}
-              class="page-link"
+              className="page-link"
             >
               prev
             </button>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === 1
@@ -151,9 +151,9 @@ function FoodMenu() {
               {page - 1 === 0 ? page : page === last ? page - 2 : page - 1}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === 1
@@ -166,9 +166,9 @@ function FoodMenu() {
               {page === 1 ? page + 1 : page === last ? page - 1 : page}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === last
@@ -179,13 +179,13 @@ function FoodMenu() {
               {page - 1 === 0 ? page + 2 : page === last ? page : page + 1}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <button
               disabled={page >= last}
               onClick={() => {
                 setPage(page + 1);
               }}
-              class="page-link"
+              className="page-link"
             >
               next
             </button>
@@ -219,9 +219,9 @@ function FoodMenu() {
                   gridTemplateColumns: "repeat(4,1fr)",
                 }}
               >
-                {foodType.map((item) => (
-                  <div className="pe-3">
-                    <input type="checkbox" className="mx-1" checked />
+                {foodType.map((item,idx) => (
+                  <div className="pe-3" key={idx}>
+                    <input type="checkbox" className="mx-1" defaultChecked />
                     <span style={{ color: "#333333" }}>{item}</span>
                   </div>
                 ))}
@@ -237,7 +237,7 @@ function FoodMenu() {
               </p>
               <input
                 type="text"
-                class="ps-2 me-5"
+                className="ps-2 me-5"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
                 style={{
@@ -271,15 +271,15 @@ function FoodMenu() {
                 className="ps-2"
                 aria-label="Default select example"
               >
-                <option selected>Malaysia</option>
+                <option defaultValue="Malaysia">Malaysia</option>
                 {locationList.map((list, idx) => (
-                  <option value={idx}>{list}</option>
+                  <option value={idx} key={idx}>{list}</option>
                 ))}
               </select>
             </div>
           </div>
           <button
-            class="mt-3 red-btn"
+            className="mt-3 red-btn"
             style={{
               backgroundColor: "#f53838",
               color: "white",

@@ -50,7 +50,7 @@ function FoodMap() {
                 src="https://www.kindmeal.my/images/map/marker-shop.png"
                 alt=""
               />
-              <input type="checkbox" className="mx-2" checked />
+              <input type="checkbox" className="mx-2" defaultChecked />
               <p
                 className="m-0"
                 style={{
@@ -71,7 +71,7 @@ function FoodMap() {
                 src="https://www.kindmeal.my/images/map/marker-red.png"
                 alt=""
               />
-              <input type="checkbox" className="mx-2" checked />
+              <input type="checkbox" className="mx-2" defaultChecked />
               <p
                 className="m-0"
                 style={{
@@ -103,7 +103,7 @@ function FoodMap() {
           </p>
           <input
             type="text"
-            class="ps-2 me-5"
+            className="ps-2 me-5"
             aria-label="Username"
             aria-describedby="basic-addon1"
             style={{
@@ -116,7 +116,7 @@ function FoodMap() {
             }}
           />
           <button
-            class="me-5 red-btn"
+            className="me-5 red-btn"
             style={{
               backgroundColor: "#f53838",
               color: "white",
@@ -135,7 +135,6 @@ function FoodMap() {
           <div style={{ height: "50rem", width: "67rem" }}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127482.73208419896!2d101.45227614319559!3d3.138143347622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4ececc1c7c97%3A0x524c8e31e929bc76!2sPetaling%20Jaya%2C%20Selangor%2C%20Malaysia!5e0!3m2!1sen!2sin!4v1722002270051!5m2!1sen!2sin"
-              referrerpolicy="no-referrer-when-downgrade"
               style={{ height: "50rem", width: "67rem" }}
             ></iframe>
           </div>

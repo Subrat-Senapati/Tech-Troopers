@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import DirNav from "./DirNav";
 
 function Resturant() {
-  
   const [restaurantList, setRestaurantList] = useState([]);
   const [page, setPage] = useState(1);
   const [last, setLast] = useState(0);
@@ -20,7 +19,7 @@ function Resturant() {
   useEffect(() => {
     getData();
   }, [page, last]);
-  
+
   return (
     <>
       <div
@@ -44,8 +43,8 @@ function Resturant() {
 
       <div className="d-flex justify-content-center">
         <div className="d-flex flex-row flex-wrap justify-content-center">
-          {restaurantList.map((item) => (
-            <div>
+          {restaurantList.map((item, idx) => (
+            <div key={idx}>
               <div
                 className="card m-4"
                 style={{
@@ -97,21 +96,21 @@ function Resturant() {
       </div>
 
       <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item ">
+        <ul className="pagination justify-content-center">
+          <li className="page-item ">
             <button
               disabled={page <= first}
               onClick={() => {
                 setPage(page - 1);
               }}
-              class="page-link"
+              className="page-link"
             >
               prev
             </button>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === 1
@@ -122,9 +121,9 @@ function Resturant() {
               {page - 1 === 0 ? page : page === last ? page - 2 : page - 1}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === 1
@@ -137,9 +136,9 @@ function Resturant() {
               {page === 1 ? page + 1 : page === last ? page - 1 : page}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === last
@@ -150,13 +149,13 @@ function Resturant() {
               {page - 1 === 0 ? page + 2 : page === last ? page : page + 1}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <button
               disabled={page >= last}
               onClick={() => {
                 setPage(page + 1);
               }}
-              class="page-link"
+              className="page-link"
             >
               next
             </button>

@@ -10,12 +10,12 @@ function MealDeal() {
         <TopMeal />
         <MealHead />
         <KindFood/>
-        <div class="pt-4" style={{ backgroundColor: "#ececec" }}>
-          <div class="text-center">
+        <div className="pt-4" style={{ backgroundColor: "#ececec" }}>
+          <div className="text-center">
             <center>
               <img
                 src="https://www.kindmeal.my/images/how_kindmeal_works.png"
-                class="img-fluid"
+                className="img-fluid"
                 alt="..."
               ></img>
             </center>

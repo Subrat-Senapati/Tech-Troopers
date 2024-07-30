@@ -77,10 +77,10 @@ function VegDir() {
             <a href="#">contact us</a> now.
           </p>
           <div className="d-flex flex-row justify-content-between">
-            <div class="m-2">
+            <div className="m-2">
               <input
                 type="text"
-                class="ps-2 me-5"
+                className="ps-2 me-5"
                 placeholder="Search Shop Name"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
@@ -107,13 +107,13 @@ function VegDir() {
                 className="ps-2"
                 aria-label="Default select example"
               >
-                <option selected>All Shops in Malaysia</option>
+                <option defaultValue="All Shops in Malaysia">All Shops in Malaysia</option>
                 {shopList.map((list, idx) => (
-                  <option value={idx}>{list}</option>
+                  <option value={list} key={idx}>{list}</option>
                 ))}
               </select>
               <button
-                class="mx-5 red-btn"
+                className="mx-5 red-btn"
                 style={{
                   backgroundColor: "#f53838",
                   color: "white",
@@ -126,7 +126,7 @@ function VegDir() {
                 Search Shops
               </button>
               <button
-                class="mx-5 green-btn"
+                className="mx-5 green-btn"
                 style={{
                   backgroundColor: "#04be5a",
                   color: "white",
@@ -146,7 +146,7 @@ function VegDir() {
       <div className="d-flex justify-content-center">
         <div className="d-flex flex-row flex-wrap justify-content-center">
           {vegData.map((data,idx) => (
-            <div>
+            <div key={idx}>
               <div
                 className="card m-4"
                 style={{
@@ -174,15 +174,15 @@ function VegDir() {
                   )}
                 </p>
                 <hr />
-                <h5 class="m-0" style={{ color: "#444444" }}>
+                <h5 className="m-0" style={{ color: "#444444" }}>
                   Address
                 </h5>
                 <p style={{ color: "#444444" }}>{data.address}</p>
-                <h5 class="m-0" style={{ color: "#444444" }}>
+                <h5 className="m-0" style={{ color: "#444444" }}>
                   Phone
                 </h5>
                 <p style={{ color: "#444444" }}>{data.phone}</p>
-                <h5 class="m-0" style={{ color: "#444444" }}>
+                <h5 className="m-0" style={{ color: "#444444" }}>
                   Opening Hours
                 </h5>
                 <p style={{ color: "#444444" }}>{data.openTime}</p>
@@ -192,12 +192,12 @@ function VegDir() {
                 >
                   <img
                     style={{ height: "200px", width: "450px" }}
-                    class="img-fluid"
+                    className="img-fluid"
                     src={apiImage[idx]}
                     alt=""
                   />
                 </div>
-                <div class="d-flex flex-row justify-content-between">
+                <div className="d-flex flex-row justify-content-between">
                   <button
                     className="a-decoration"
                     style={{
@@ -244,21 +244,21 @@ function VegDir() {
         </div>
       </div>
       <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item ">
+        <ul className="pagination justify-content-center">
+          <li className="page-item ">
             <button
               disabled={page <= first}
               onClick={() => {
                 setPage(page - 1);
               }}
-              class="page-link"
+              className="page-link"
             >
               prev
             </button>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === 1
@@ -269,9 +269,9 @@ function VegDir() {
               {page - 1 === 0 ? page : page === last ? page - 2 : page - 1}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === 1
@@ -284,9 +284,9 @@ function VegDir() {
               {page === 1 ? page + 1 : page === last ? page - 1 : page}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === last
@@ -297,13 +297,13 @@ function VegDir() {
               {page - 1 === 0 ? page + 2 : page === last ? page : page + 1}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <button
               disabled={page >= last}
               onClick={() => {
                 setPage(page + 1);
               }}
-              class="page-link"
+              className="page-link"
             >
               next
             </button>

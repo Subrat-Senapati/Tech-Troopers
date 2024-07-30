@@ -33,7 +33,7 @@ function Home() {
     <>
       <Sliderr />
       <HomeContainer />
-      <div class="mt-5 text-center ">
+      <div className="mt-5 text-center ">
         <center
           style={{
             color: "#666666",
@@ -49,7 +49,7 @@ function Home() {
           </center>
           <center>
             <img
-              class="m-3 "
+              className="m-3 "
               style={{ height: "3rem", cursor: "pointer" }}
               src="https://www.kindmeal.my/images/logo-petfinder-v2.png"
               alt="PetFinder.my"
@@ -58,7 +58,7 @@ function Home() {
         </div>
 
         <center
-          class="mt-4"
+          className="mt-4"
           style={{ color: "#888888", fontSize: "1.5rem", fontWeight: "500" }}
         >
           Instant coupon & dining. No upfront coupon payment, booking or
@@ -67,15 +67,16 @@ function Home() {
       </div>
 
       <div
-        class="text-center "
+        className="text-center "
         style={{
           display: "flex",
           justifyContent: "center",
           margin: "3.3rem auto",
         }}
       >
-        {list.map((item) => (
+        {list.map((item,idx) => (
           <div
+          key={idx}
             className="m-3  py-4 px-2 text-center"
             style={{
               width: "16rem",
@@ -84,7 +85,7 @@ function Home() {
             }}
           >
             <img
-              class="mb-3 mx-auto"
+              className="mb-3 mx-auto"
               style={{ height: "6rem", cursor: "pointer" }}
               src={item.image}
               alt=""
@@ -99,7 +100,7 @@ function Home() {
         ))}
       </div>
 
-      <div class="text-center">
+      <div className="text-center">
         <center style={{ color: "#888888", fontSize: "1.3rem" }}>
           Any restaurant or cafe can join KindMeal, vegetarian or not, as long
           as the deals and menu featured are meat-free.
@@ -128,27 +129,27 @@ function Home() {
           }}
           type="button"
         >
-          <h1 class="m-0">Join KindMeal Now</h1>
-          <p class="m-0">Your testy journey begins here</p>
+          <h1 className="m-0">Join KindMeal Now</h1>
+          <p className="m-0">Your testy journey begins here</p>
         </button>
       </center>
       <div>
-        <div class="text-center pb-5">
+        <div className="text-center pb-5">
           <h3 style={{ color: "#888888" }}>Featured On</h3>
           <center>
             <img
               src="https://www.kindmeal.my/images/media-feature2.png"
-              class="img-fluid"
+              className="img-fluid"
               alt="..."
             ></img>
           </center>
         </div>
         <div style={{ backgroundColor: "#ececec" }}>
-          <div class="text-center">
+          <div className="text-center">
             <center>
               <img
                 src="https://www.kindmeal.my/images/banner_whykindmeal.png"
-                class="img-fluid"
+                className="img-fluid"
                 alt="..."
               ></img>
             </center>

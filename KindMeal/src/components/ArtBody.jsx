@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 function ArtBody() {
-  
   const [Adata, setAdata] = useState([]);
   const [page, setPage] = useState(1);
   const [last, setLast] = useState(0);
@@ -29,8 +28,9 @@ function ArtBody() {
             justifyContent: "center",
           }}
         >
-          {Adata.map((value) => (
+          {Adata.map((value,idx) => (
             <div
+            key={idx}
               style={{
                 boxShadow: "0 0 0.3rem gray",
                 width: "70rem",
@@ -66,7 +66,7 @@ function ArtBody() {
                   {value.text}{" "}
                 </p>
                 <button
-                className="red-btn"
+                  className="red-btn"
                   style={{
                     backgroundColor: "#f53838",
                     width: "12rem",
@@ -89,21 +89,21 @@ function ArtBody() {
         </div>
       </div>
       <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item ">
+        <ul className="pagination justify-content-center">
+          <li className="page-item ">
             <button
               disabled={page <= first}
               onClick={() => {
                 setPage(page - 1);
               }}
-              class="page-link"
+              className="page-link"
             >
               prev
             </button>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === 1
@@ -114,9 +114,9 @@ function ArtBody() {
               {page - 1 === 0 ? page : page === last ? page - 2 : page - 1}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === 1
@@ -129,9 +129,9 @@ function ArtBody() {
               {page === 1 ? page + 1 : page === last ? page - 1 : page}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link"
+              className="page-link"
               href="#"
               style={
                 page === last
@@ -142,13 +142,13 @@ function ArtBody() {
               {page - 1 === 0 ? page + 2 : page === last ? page : page + 1}
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <button
               disabled={page >= last}
               onClick={() => {
                 setPage(page + 1);
               }}
-              class="page-link"
+              className="page-link"
             >
               next
             </button>

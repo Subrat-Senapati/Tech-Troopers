@@ -69,12 +69,12 @@ function Footer() {
   ];
   return (
     <>
-      <footer class="p-4" style={{ color: "white" ,backgroundColor:"#2bb673"}}>
-        <div class="d-flex justify-content-around flex-wrap">
+      <footer className="p-4" style={{ color: "white" ,backgroundColor:"#2bb673"}}>
+        <div className="d-flex justify-content-around flex-wrap">
           {list.map((item) => (
-            <div class="mx-3" key={item.title} style={{ width: "auto",height:"auto"}}>
-              <h5 class="m-0" style={{fontSize:"1rem"}}>{item.title}</h5>
-              <ul class="p-0 m-0">
+            <div className="mx-3" key={item.title} style={{ width: "auto",height:"auto"}}>
+              <h5 className="m-0" style={{fontSize:"1rem"}}>{item.title}</h5>
+              <ul className="p-0 m-0">
                 {item.li.map((item) => (
                   <li
                     key={item}

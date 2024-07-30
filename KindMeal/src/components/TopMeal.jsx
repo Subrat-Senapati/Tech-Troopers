@@ -2,7 +2,7 @@ import React from "react";
 
 function TopMeal() {
   return (
-    <div>
+    <div >
       <div
         className="d-flex justify-content-center"
         style={{ backgroundColor: "rgb(240, 240, 240)", padding: "2rem" }}
@@ -24,10 +24,10 @@ function TopMeal() {
             environment and money now!
           </p>
           <div className="d-flex flex-row justify-content-between">
-            <div class="m-2">
+            <div className="m-2">
               <input
                 type="text"
-                class="ps-2 me-4"
+                className="ps-2 me-4"
                 placeholder="Search Shop Or Deal"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
@@ -54,7 +54,7 @@ function TopMeal() {
                 className="ps-2"
                 aria-label="Default select example"
               >
-                <option selected>All Category</option>
+                <option defaultValue="All Category">All Category</option>
                 <option value="1">Pasta</option>
                 <option value="2">Burger</option>
                 <option value="3">Breakfast</option>
@@ -81,7 +81,7 @@ function TopMeal() {
                 className="ps-2"
                 aria-label="Default select example"
               >
-                <option selected>All Location</option>
+                <option defaultValue="All Location" >All Location</option>
                 <option value="1">Kuala Lumpur</option>
                 <option value="2">Ampang</option>
                 <option value="3">Petaling Jaya</option>
@@ -99,7 +99,7 @@ function TopMeal() {
               </select>
 
               <button
-                class="me-4 red-btn"
+                className="me-4 red-btn"
                 style={{
                   backgroundColor: "#f53838",
                   color: "white",
@@ -112,7 +112,7 @@ function TopMeal() {
                 Search Deals
               </button>
               <button
-                class="green-btn"
+                className="green-btn"
                 style={{
                   backgroundColor: "#04be5a",
                   color: "white",

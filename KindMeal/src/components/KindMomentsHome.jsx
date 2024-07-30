@@ -43,15 +43,15 @@ import MomentsList from './MomentsList';
   </Flex>
   <Flex justifyContent={"space-between"} width={"30%"} color={'blue'} margin='15px 0px'>
   <Text pt='15px' color='grey'>Page:  </Text>
-    <button class="item"><a class="link" href="#">1</a></button>
-    <button class="item"><a class="link" href="#">2</a></button>
-    <button class="item"><a class="link" href="#">3</a></button>
-    <button class="item"><a class="link" href="#">4</a></button>
-    <button class="item"><a class="link" href="#">5</a></button>
-    <button class="item"><a class="link" href="#">6</a></button>
-    <button class="item"><a class="link" href="#">7</a></button>
-    <button class="item"><a class="link" href="#">8</a></button>
-    <button class="item"><a class="link" href="#">9</a></button>
+    <button className="item"><a className="link" href="#">1</a></button>
+    <button className="item"><a className="link" href="#">2</a></button>
+    <button className="item"><a className="link" href="#">3</a></button>
+    <button className="item"><a className="link" href="#">4</a></button>
+    <button className="item"><a className="link" href="#">5</a></button>
+    <button className="item"><a className="link" href="#">6</a></button>
+    <button className="item"><a className="link" href="#">7</a></button>
+    <button className="item"><a className="link" href="#">8</a></button>
+    <button className="item"><a className="link" href="#">9</a></button>
   </Flex>
 
         <MomentsList/>
@@ -62,15 +62,15 @@ import MomentsList from './MomentsList';
 
       <Flex justifyContent={"space-between"} width={"30%"} color={'blue'} margin='15px 0px'>
     <Text pt='15px' color='grey'>Page:  </Text>
-    <button class="item"><a class="link" href="#">1</a></button>
-    <button class="item"><a class="link" href="#">2</a></button>
-    <button class="item"><a class="link" href="#">3</a></button>
-    <button class="item"><a class="link" href="#">4</a></button>
-    <button class="item"><a class="link" href="#">5</a></button>
-    <button class="item"><a class="link" href="#">6</a></button>
-    <button class="item"><a class="link" href="#">7</a></button>
-    <button class="item"><a class="link" href="#">8</a></button>
-    <button class="item"><a class="link" href="#">9</a></button>
+    <button className="item"><a className="link" href="#">1</a></button>
+    <button className="item"><a className="link" href="#">2</a></button>
+    <button className="item"><a className="link" href="#">3</a></button>
+    <button className="item"><a className="link" href="#">4</a></button>
+    <button className="item"><a className="link" href="#">5</a></button>
+    <button className="item"><a className="link" href="#">6</a></button>
+    <button className="item"><a className="link" href="#">7</a></button>
+    <button className="item"><a className="link" href="#">8</a></button>
+    <button className="item"><a className="link" href="#">9</a></button>
   </Flex>
     </Box>
     </div>

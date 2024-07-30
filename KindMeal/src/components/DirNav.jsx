@@ -14,7 +14,7 @@ function DirNav() {
       <div className="d-flex justify-content-center my-4">
         <div className="d-flex">
           {AllLink.map((item, idx) => (
-            <div className="dir">
+            <div className="dir" key={idx}>
               <NavLink
                 to={item.path}
                 style={{
@@ -25,9 +25,7 @@ function DirNav() {
                 className="mx-5 py-2"
               >
                 <button
-                  class="btn btn-outline-primary"
-                  for={idx}
-                  className="px-3 py-2"
+                  className="btn px-3 py-2"
                   style={{
                     borderRadius: ".5rem",
                     border: ".01rem solid gray",

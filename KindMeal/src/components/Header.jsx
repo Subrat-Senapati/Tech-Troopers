@@ -19,18 +19,19 @@ function Header() {
   return (
     <>
       <div className="d-flex flex-row justify-content-center align-items-center">
-        <div class="my-2">
+        <div className="my-2">
           <img
             style={{ height: "4.35rem" }}
             src="https://www.kindmeal.my/images/logo-kindmeal.png"
             alt=""
           />
         </div>
-        <div style={{ width: "20rem" }} class="d-flex flex-row-reverse">
+        <div style={{ width: "20rem" }} className="d-flex flex-row-reverse">
           <div>
-            {link.map((item) => (
+            {link.map((item,idx) => (
               <img
-                class="m-2"
+                key={idx}
+                className="m-2"
                 style={{ height: "2.5rem", display: "inline-block" }}
                 src={item}
                 alt=""
@@ -46,7 +47,7 @@ function Header() {
             <LoginPopup isOpen={isOpen} onClose={closePopup} />
 
             <button
-              class="px-3 mx-2"
+              className="px-3 mx-2"
               style={{
                 height: "1.7rem",
                 borderRadius: ".5rem",
@@ -58,7 +59,7 @@ function Header() {
               Facebook
             </button>
             <button
-              class="px-3 py-0 mx-2"
+              className="px-3 py-0 mx-2"
               style={{
                 height: "1.7rem",
                 borderRadius: ".5rem",
@@ -71,7 +72,7 @@ function Header() {
             </button>
 
             <button
-              class="px-3 py-0 mx-2"
+              className="px-3 py-0 mx-2"
               style={{
                 height: "1.7rem",
                 border: "none",

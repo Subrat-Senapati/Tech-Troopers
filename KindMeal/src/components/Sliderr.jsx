@@ -1,11 +1,6 @@
-import React, { useState, useEffect } from "react";
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption,
-} from "reactstrap";
+import React, { useState, useEffect, useCallback } from "react";
+import { Carousel, CarouselItem, CarouselControl } from "reactstrap";
+//import "./Sliderr.css"; // Assume you have a CSS file for additional styles
 
 const Sliderr = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -55,33 +50,34 @@ const Sliderr = () => {
     },
   ];
 
-  const next = () => {
+  const next = useCallback(() => {
     if (animating) return;
     const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
-  };
+  }, [animating, activeIndex, items.length]);
 
-  const previous = () => {
+  const previous = useCallback(() => {
     if (animating) return;
     const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
-  };
+  }, [animating, activeIndex, items.length]);
 
-  const goToIndex = (newIndex) => {
-    if (animating) return;
-    setActiveIndex(newIndex);
-  };
+  const goToIndex = useCallback(
+    (newIndex) => {
+      if (animating) return;
+      setActiveIndex(newIndex);
+    },
+    [animating]
+  );
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      next();
-    }, 13000); // autoplay every 13 seconds
+    const intervalId = setInterval(next, 5000); // autoplay every 5 seconds
     return () => clearInterval(intervalId);
-  }, []);
+  }, [next]);
 
   return (
     <div
-      class="text-center mb-1 mx-5"
+      className="text-center mb-1 mx-5"
       style={{ boxShadow: "0 0 .3rem grey" }}
     >
       <Carousel
@@ -99,25 +95,36 @@ const Sliderr = () => {
             <img
               src={item.src}
               alt={item.altText}
-              style={{ width: "70rem", height: "30rem", margin:"0 auto"}}
+              style={{ width: "70rem", height: "30rem", margin: "0 auto" }}
             />
           </CarouselItem>
         ))}
 
+        {/* <CarouselControl
+          direction="prev"
+          directionText="Previous"
+          onClickHandler={previous}
+        />
+        <CarouselControl
+          direction="next"
+          directionText="Next"
+          onClickHandler={next}
+        /> */}
+
         <div className="carousel-thumbnails carousel-indicators m-2">
           {items.map((item, index) => (
             <button
+              key={index}
               style={{
                 width: "9rem",
                 height: "7rem",
                 border: "none",
                 marginTop: "4rem",
               }}
-              class="mx-3 p-0 "
-              disabled="true"
+              className="mx-3 p-0"
+              aria-label={`Slide ${index + 1}`}
             >
               <img
-                key={index}
                 src={item.thumbnail}
                 style={{
                   width: "9rem",
@@ -126,7 +133,7 @@ const Sliderr = () => {
                 }}
                 alt={item.altText}
                 onClick={() => goToIndex(index)}
-                className={index === activeIndex ? "active" : " "}
+                className={index === activeIndex ? "active" : ""}
               />
             </button>
           ))}
